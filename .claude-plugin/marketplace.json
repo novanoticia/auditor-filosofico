@@ -1,0 +1,14 @@
+{
+  "name": "auditor-filosofico-marketplace",
+  "owner": {
+    "name": "novanoticia"
+  },
+  "plugins": [
+    {
+      "name": "auditor-filosofico",
+      "source": "./plugins/claude/auditor-filosofico",
+      "description": "Examina evidencia, conceptos, argumentos y supuestos con selección automática del enfoque y autocrítica explícita.",
+      "version": "0.1.0"
+    }
+  ]
+}

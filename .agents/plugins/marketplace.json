@@ -1,0 +1,16 @@
+{
+  "name": "auditor-filosofico-marketplace",
+  "interface": {
+    "displayName": "Auditor Filosófico"
+  },
+  "plugins": [
+    {
+      "name": "auditor-filosofico",
+      "source": {
+        "source": "local",
+        "path": "./plugins/codex/auditor-filosofico"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
