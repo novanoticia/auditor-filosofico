@@ -54,4 +54,6 @@ El último comando crea `.artifacts/auditor-filosofico-skill.zip`. La generació
 
 La propuesta de alcance y los cambios respecto de los adjuntos están en [las decisiones de diseño](docs/diseno.md). Los [originales aportados](references/originales/README.md) conservan su contenido histórico. El proyecto se distribuye bajo la [licencia MIT](LICENSE).
 
-*Dedicado al Dr. Francisco José García Carbonell.*
+*Dedicado a Francisco José García Carbonell.*
+
+*Doctor en Teología, Máster en Literatura Comparada Europea y en Filosofía Contemporánea. Actualmente Cursando segundo de Psicología.*
