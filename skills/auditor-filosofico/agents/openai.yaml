@@ -1,0 +1,6 @@
+interface:
+  display_name: "Auditor Filosófico"
+  short_description: "Examina ideas, evidencia, argumentos y supuestos"
+  default_prompt: "Usa $auditor-filosofico para analizar este texto."
+policy:
+  allow_implicit_invocation: false

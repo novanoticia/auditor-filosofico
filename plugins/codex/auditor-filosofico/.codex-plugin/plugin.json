@@ -1,0 +1,30 @@
+{
+  "name": "auditor-filosofico",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Examina evidencia, conceptos, argumentos y supuestos con selección automática del enfoque y autocrítica explícita.",
+  "author": {
+    "name": "novanoticia"
+  },
+  "homepage": "https://github.com/novanoticia/auditor-filosofico",
+  "repository": "https://github.com/novanoticia/auditor-filosofico",
+  "keywords": [
+    "filosofia",
+    "epistemologia",
+    "argumentos",
+    "evidencia"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Auditor Filosófico",
+    "shortDescription": "Examina ideas, evidencia, argumentos y supuestos",
+    "developerName": "novanoticia",
+    "category": "Productivity",
+    "capabilities": [
+      "Read"
+    ],
+    "defaultPrompt": [
+      "Auditor Filosófico: analiza este texto"
+    ]
+  }
+}
