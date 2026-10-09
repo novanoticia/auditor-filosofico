@@ -14,6 +14,8 @@
 
 `src/` es la fuente común del método. `scripts/build.py` genera el prompt portable, la skill portable y paquetes autocontenidos para Codex y Claude Code. Las copias se incluyen en Git para que puedan utilizarse sin Python; Python solo hace falta para regenerarlas o crear el ZIP.
 
+`src/adapters/le-chat.md` y `src/adapters/perplexity.md` añaden reglas del chat web al método común. El generador produce un prompt completo y unas instrucciones breves por plataforma y un ZIP con guía, licencia y casos manuales. Las adaptaciones conservan la invocación expresa y no utilizan API ni servidor. Se documenta por separado la validación estructural y la evaluación pendiente en cada cuenta.
+
 El módulo epistémico trabaja principalmente sobre respaldo de afirmaciones y decisiones. El módulo filosófico especializa criterios conceptuales, interpretativos, normativos y por tradición. En contenido mixto se utilizan ambos, con una reconstrucción compartida del argumento. La clasificación es provisional y admite elección explícita del usuario.
 
 ## Adaptaciones respecto de los originales

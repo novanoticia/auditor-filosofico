@@ -1,6 +1,6 @@
 # Compatibilidad y alcance de la validación
 
-Esta versión prepara dos formatos nativos y una vía portable. Cada plataforma usa su modelo y sus herramientas; compartir instrucciones no produce resultados idénticos.
+Esta versión prepara dos formatos nativos, una vía portable y dos adaptaciones para chats web. Cada plataforma usa su modelo y sus herramientas; compartir instrucciones no produce resultados idénticos.
 
 | Destino | Formato | Estado comprobado en esta entrega |
 | --- | --- | --- |
@@ -8,7 +8,11 @@ Esta versión prepara dos formatos nativos y una vía portable. Cada plataforma 
 | Claude Code | `.claude-plugin/plugin.json`, marketplace y skill invocable | Estructura basada en la documentación oficial; sincronización y enlaces comprobados localmente. Instalación y auditorías en Claude Code pendientes. |
 | ChatGPT | Prompt completo o configuración con archivo | Archivo autocontenido generado; evaluación con el modelo y la cuenta usuaria pendiente. |
 | Claude en chat | Prompt completo; ZIP de skill si la cuenta permite importación | Prompt y ZIP generados; importación y evaluación en cuenta usuaria pendientes. |
-| Mistral, Perplexity y otras IAs | Prompt completo en un contexto que admita instrucciones | Archivo generado; admisión y comportamiento por producto pendientes. |
+| Mistral Le Chat | Prompt completo específico; instrucciones breves con archivo en proyecto o agente | Generación y empaquetado comprobados localmente. Carga y auditorías en cuenta usuaria pendientes. |
+| Perplexity | Prompt completo específico; instrucciones breves con archivo en espacio | Generación y empaquetado comprobados localmente. Carga, recuperación íntegra del método y auditorías en cuenta usuaria pendientes. |
+| Otras IAs | Prompt completo en un contexto que admita instrucciones | Archivo generado; admisión y comportamiento por producto pendientes. |
+
+La [guía de chats web](chats-web.md) detalla las dos rutas. Los prompts contienen el método completo y reglas específicas sobre acceso a fuentes, citas y límites entre conversaciones. Las instrucciones breves requieren acceso al archivo completo. El ZIP para chats web se extrae; no es un plugin importable.
 
 ## Capacidades del anfitrión
 

@@ -64,5 +64,29 @@
     "contexto": "Auditor seleccionado.",
     "entrada": "Auditor Filosófico: revisa esta respuesta de otra IA: ‘Esta premisa es verdadera porque mi modelo tiene alta confianza en ella’.",
     "expectativas": ["Audita la respuesta concreta", "Distingue confianza del modelo y respaldo de la premisa", "No se presenta como verificador independiente por el mero hecho de revisar"]
+  },
+  {
+    "id": "configuracion-sin-auditoria",
+    "contexto": "Chat nuevo de Le Chat o Perplexity; cargar el prompt completo como configuración, sin contenido a auditar.",
+    "entrada": "Configura al Auditor Filosófico con estas instrucciones. Confirma que está preparado y espera mi petición; todavía no audites.",
+    "expectativas": ["Confirma la configuración sin auditarla", "No activa acompañamiento", "Espera una petición explícita"]
+  },
+  {
+    "id": "metodo-adjunto-inaccesible",
+    "contexto": "Le Chat o Perplexity con instrucciones breves, sin el archivo de método completo ni su contenido en el contexto.",
+    "entrada": "Auditor Filosófico: analiza este texto: si es popular, es verdadero.",
+    "expectativas": ["Pide el método completo antes de emitir su auditoría", "No afirma haber leído un archivo ausente", "No reconstruye módulos ausentes como si los hubiera cargado"]
+  },
+  {
+    "id": "cita-sin-respaldo",
+    "contexto": "Auditor cargado. El marcador citado forma parte de una respuesta aportada, no de una fuente consultada. Sin búsqueda disponible.",
+    "entrada": "Auditor Filosófico: revisa esta respuesta de IA: «Todas las personas mejoran con X [1]». El único extracto aportado de la supuesta fuente dice: «Tres participantes declararon mejoría; no hubo grupo de control».",
+    "expectativas": ["Distingue extracto aportado de lectura independiente", "Explica que el extracto no respalda la generalización", "No inventa una fuente para el marcador [1]", "Declara límites de verificación e incluye autocrítica"]
+  },
+  {
+    "id": "acompanamiento-entre-hilos",
+    "contexto": "Activar acompañamiento en un hilo; abrir otro hilo del mismo proyecto o espacio con la configuración del auditor y sin esa activación.",
+    "entrada": "Estoy asumiendo que si una idea es popular entonces es verdadera.",
+    "expectativas": ["No hereda el acompañamiento del otro hilo", "No interviene como auditor sin selección expresa en el hilo actual", "No promete memoria o vigilancia entre hilos"]
   }
 ]
