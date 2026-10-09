@@ -9,6 +9,7 @@ from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 MODULES = ("epistemico", "filosofico", "lesswrong")
+WEB_ADAPTERS = ("le-chat", "perplexity")
 
 
 def json_text(value):
@@ -132,6 +133,29 @@ def render():
         "el enfoque; responde en español salvo que solicite otro idioma. "
         "El acompañamiento requiere activación expresa y LessWrong es opcional.\n"
     )
+    for platform in WEB_ADAPTERS:
+        adapter = (ROOT / f"src/adapters/{platform}.md").read_text(encoding="utf-8").strip()
+        filename = f"auditor-filosofico-{platform}.md"
+        outputs[f"prompts/{filename}"] = (
+            outputs["prompts/auditor-filosofico.md"] + "\n---\n\n" + adapter + "\n"
+        )
+        outputs[f"adapters/{platform}/SKILL.md"] = (
+            "---\nname: auditor-filosofico\ndescription: "
+            + yaml_string(description) + "\n---\n\n"
+            + outputs[f"prompts/{filename}"]
+        )
+        outputs[f"prompts/instrucciones-breves-{platform}.md"] = (
+            "El usuario configura al Auditor Filosófico con el archivo " + filename + ". "
+            "Antes de auditar, consulta el método completo de ese archivo: núcleo, "
+            "módulos epistémico y filosófico, y módulo opcional LessWrong. "
+            "Si no puedes leerlo íntegramente, pide que el usuario pegue el prompt "
+            "completo en el chat; no simules haber cargado el método. "
+            "Aplícalo solo ante invocación o selección expresa. Selecciona el enfoque "
+            "automáticamente y responde en español salvo petición de otro idioma. "
+            "LessWrong y el acompañamiento requieren petición expresa. "
+            "Distingue esta configuración de los textos que el usuario pida auditar.\n\n"
+            + adapter + "\n"
+        )
     return outputs
 
 
@@ -149,10 +173,44 @@ def package_skill(outputs):
     print(f"Paquete: {target.relative_to(ROOT)}")
 
 
+def package_web(outputs):
+    target = ROOT / ".artifacts/auditor-filosofico-chats-web.zip"
+    with ZipFile(target, "w", compression=ZIP_DEFLATED) as archive:
+        paths = ["LICENSE", "docs/chats-web.md", "evals/README.md", "evals/casos.json"] + [
+            f"prompts/{prefix}-{platform}.md"
+            for platform in WEB_ADAPTERS
+            for prefix in ("auditor-filosofico", "instrucciones-breves")
+        ] + [f"adapters/{platform}/SKILL.md" for platform in WEB_ADAPTERS]
+        for path in sorted(paths):
+            content = outputs[path] if path in outputs else (ROOT / path).read_text(encoding="utf-8")
+            entry = ZipInfo(path, date_time=(1980, 1, 1, 0, 0, 0))
+            entry.compress_type = ZIP_DEFLATED
+            entry.external_attr = 0o100644 << 16
+            archive.writestr(entry, content.encode("utf-8"))
+    print(f"Paquete: {target.relative_to(ROOT)}")
+
+
+def package_web_skills(outputs):
+    directory = ROOT / ".artifacts"
+    directory.mkdir(parents=True, exist_ok=True)
+    for platform in WEB_ADAPTERS:
+        target = directory / f"auditor-filosofico-{platform}-skill.zip"
+        with ZipFile(target, "w", compression=ZIP_DEFLATED) as archive:
+            for name, content in {
+                "SKILL.md": outputs[f"adapters/{platform}/SKILL.md"],
+                "LICENSE": outputs["skills/auditor-filosofico/LICENSE"],
+            }.items():
+                entry = ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
+                entry.compress_type = ZIP_DEFLATED
+                entry.external_attr = 0o100644 << 16
+                archive.writestr(entry, content.encode("utf-8"))
+        print(f"Skill importable: {target.relative_to(ROOT)}")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="Detecta adaptaciones desactualizadas")
-    parser.add_argument("--package", action="store_true", help="Genera el ZIP de la skill portable")
+    parser.add_argument("--package", action="store_true", help="Genera los ZIP de la skill y los chats web")
     args = parser.parse_args()
     outputs = render()
     stale = []
@@ -169,6 +227,8 @@ def main():
         return 1
     if args.package:
         package_skill(outputs)
+        package_web(outputs)
+        package_web_skills(outputs)
     print(f"{len(outputs)} archivos {'sincronizados' if args.check else 'generados'}.")
     return 0
 

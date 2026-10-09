@@ -56,7 +56,7 @@ Puedes utilizar el método sin plugin nativo:
 
 Si un asistente, proyecto o espacio permite adjuntar archivos de configuración, añade el prompt completo y utiliza las [instrucciones breves](../prompts/instrucciones-breves.md) en el campo de instrucciones. Esas instrucciones requieren que el modelo pueda consultar el archivo: si no puede, utiliza el prompt completo en el contexto disponible.
 
-La disponibilidad de proyectos, asistentes, importación de skills o límites de instrucciones depende de la cuenta y el producto. En Mistral, Perplexity u otros clientes, la ruta portable se aplica a espacios que admitan introducir instrucciones; no instala una extensión nativa ni modifica todos tus chats.
+La disponibilidad de proyectos, asistentes, importación de skills o límites de instrucciones depende de la cuenta y el producto. Para Mistral Le Chat y Perplexity utiliza sus prompts e instrucciones específicos siguiendo la [guía de chats web](chats-web.md). Incluye una ruta directa en conversación y otra con instrucciones y archivos de contexto cuando la cuenta los permita. No instala una extensión nativa ni modifica todos tus chats.
 
 Para clientes que acepten skills en ZIP, genera el paquete con `python3 scripts/build.py --package` e importa `.artifacts/auditor-filosofico-skill.zip` según las opciones de ese cliente. Conserva todas sus referencias. La admisión del ZIP debe comprobarse en cada producto.
 
