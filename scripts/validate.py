@@ -13,8 +13,11 @@ def local_directory(base, value):
     """Accept only existing relative directories contained in their package."""
     if not isinstance(value, str) or not value.strip() or Path(value).is_absolute():
         return False
-    root = (base / value).resolve()
-    return root.is_relative_to(base.resolve()) and root.is_dir()
+    try:
+        root = (base / value).resolve()
+        return root.is_relative_to(base.resolve()) and root.is_dir()
+    except (OSError, RuntimeError, ValueError):
+        return False
 
 
 def validate():
@@ -22,12 +25,20 @@ def validate():
     try:
         config = load_config()
         outputs = render()
+        generated = {
+            relative: expected if isinstance(expected, bytes) else expected.encode("utf-8")
+            for relative, expected in {**outputs, **render_web_packages(outputs)}.items()
+        }
     except (OSError, ValueError) as error:
         return [f"No se pueden leer las fuentes del paquete: {error}"]
-    for relative, expected in {**outputs, **render_web_packages(outputs)}.items():
+    for relative, expected in generated.items():
         path = ROOT / relative
-        expected_bytes = expected if isinstance(expected, bytes) else expected.encode("utf-8")
-        if not path.is_file() or path.read_bytes() != expected_bytes:
+        try:
+            current = path.read_bytes() if path.is_file() else None
+        except OSError as error:
+            errors.append(f"No se puede leer la adaptación: {relative}: {error}")
+            continue
+        if current != expected:
             errors.append(f"Adaptación desactualizada: {relative}")
 
     for path in ROOT.rglob("*.json"):
@@ -53,13 +64,28 @@ def validate():
             for plugin in value["plugins"]:
                 source = plugin.get("source") if isinstance(plugin, dict) else None
                 relative = source.get("path") if isinstance(source, dict) else source
-                if not local_directory(ROOT, relative):
+                if (isinstance(source, dict) and source.get("source") != "local") or not local_directory(ROOT, relative):
                     errors.append(f"Plugin fuera del paquete, inválido o ausente: {path.relative_to(ROOT)}: {relative}")
+                    continue
+                manifest = ".codex-plugin/plugin.json" if isinstance(source, dict) else ".claude-plugin/plugin.json"
+                try:
+                    present = (ROOT / relative / manifest).is_file()
+                except OSError as error:
+                    errors.append(f"Manifiesto de plugin ilegible: {path.relative_to(ROOT)}: {relative}/{manifest}: {error}")
+                    continue
+                if not present:
+                    errors.append(f"Manifiesto de plugin ausente: {path.relative_to(ROOT)}: {relative}/{manifest}")
+                if plugin.get("name") != config["name"] or ("version" in plugin and plugin["version"] != config["version"]):
+                    errors.append(f"Nombre/versión incoherente en marketplace: {path.relative_to(ROOT)}")
 
     for path in ROOT.rglob("*.md"):
         if ".git" in path.parts or "references/originales" in path.as_posix():
             continue
-        content = path.read_text(encoding="utf-8")
+        try:
+            content = path.read_text(encoding="utf-8")
+        except (OSError, ValueError) as error:
+            errors.append(f"Markdown ilegible: {path.relative_to(ROOT)}: {error}")
+            continue
         for target in re.findall(r"\[[^\]]*\]\(([^)]+)\)", content):
             if "://" in target or target.startswith(("#", "mailto:")):
                 continue
@@ -75,7 +101,12 @@ def validate():
                 errors.append("Claude debe requerir invocación explícita")
 
     codex_policy = ROOT / "plugins/codex/auditor-filosofico/skills/auditor-filosofico/agents/openai.yaml"
-    if not codex_policy.is_file() or "allow_implicit_invocation: false" not in codex_policy.read_text():
+    try:
+        policy = codex_policy.read_text(encoding="utf-8") if codex_policy.is_file() else ""
+    except (OSError, ValueError) as error:
+        errors.append(f"Política de Codex ilegible: {codex_policy.relative_to(ROOT)}: {error}")
+        policy = ""
+    if "allow_implicit_invocation: false" not in policy:
         errors.append("Codex debe requerir selección explícita de la skill")
     return errors
 

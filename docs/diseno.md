@@ -30,10 +30,11 @@ El módulo epistémico trabaja principalmente sobre respaldo de afirmaciones y d
 4. La verificación externa se distingue del análisis textual; búsqueda y citas dependen de acceso real.
 5. LessWrong pasa a perspectiva opcional. Se distingue su organización histórica de una atribución bibliográfica verificada.
 6. La falsabilidad empírica se aplica según el tipo de afirmación y no como requisito universal de la filosofía.
-7. Las comparaciones incluyen síntesis conjunta y desacuerdos centrales.
+7. Las comparaciones incluyen síntesis conjunta y desacuerdos centrales en cualquier enfoque, también en formato rápido. La regla común se carga incluso cuando solo se aplica el módulo filosófico.
 8. Las seis capas y las diecinueve entradas filosóficas se preservan en el módulo especializado. La entrada compuesta «falacia naturalista/moralista» exige especificar el problema concreto.
 9. Se mantiene la autocrítica también en profundidad rápida. Las pautas de extensión se coordinan con ese formato abreviado.
 10. La identidad del autor, intenciones y estados psicológicos no se deducen automáticamente de un fallo en el texto.
+11. El auditor pide el objeto imprescindible ausente antes de emitir conclusiones que dependan de él. Cuando dispone de un extracto suficiente, delimita el análisis parcial y evita extrapolar al documento completo.
 
 ## Desarrollo posterior
 

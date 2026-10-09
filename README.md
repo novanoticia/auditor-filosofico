@@ -62,7 +62,9 @@ python3 -m unittest discover -s tests
 python3 scripts/build.py --package
 ```
 
-El último comando crea cuatro ZIP en `.artifacts/`: la skill genérica, el paquete de distribución para chats web y dos skills importables para Le Chat y Perplexity con `SKILL.md` en la raíz. La generación mantiene las adaptaciones sincronizadas y autocontenidas. Los [casos de evaluación](evals/casos.json) sirven para comprobar el comportamiento en cada modelo; la validación de archivos no ejecuta esas auditorías ni garantiza sus resultados.
+El último comando crea cuatro ZIP en `.artifacts/`: la skill genérica, el paquete de distribución para chats web y dos skills importables para Le Chat y Perplexity con `SKILL.md` en la raíz. La generación mantiene las adaptaciones sincronizadas y autocontenidas. Prepara las fuentes y los paquetes antes de escribir: si falta una entrada o no se puede codificar, termina con un diagnóstico sin modificar las salidas existentes. `--check` no escribe; combinado con `--package`, comprueba las adaptaciones y crea únicamente los ZIP de `.artifacts/`.
+
+Los [casos de evaluación](evals/casos.json) sirven para comprobar el comportamiento en cada modelo; la validación de archivos no ejecuta esas auditorías ni garantiza sus resultados. Consulta la [guía de evaluación](evals/README.md) para registrar respuestas y límites de cada prueba.
 
 La propuesta de alcance y los cambios respecto de los adjuntos están en [las decisiones de diseño](docs/diseno.md). Los [originales aportados](references/originales/README.md) conservan su contenido histórico. El proyecto se distribuye bajo la [licencia MIT](LICENSE).
 
