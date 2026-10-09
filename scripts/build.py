@@ -172,6 +172,7 @@ def render_web_packages(outputs):
                 "LICENSE": outputs["skills/auditor-filosofico/LICENSE"],
             }.items():
                 entry = ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
+                entry.create_system = 3  # Fixed Unix metadata, including on Windows.
                 entry.compress_type = ZIP_STORED
                 entry.external_attr = 0o100644 << 16
                 archive.writestr(entry, content.encode("utf-8"))
@@ -187,6 +188,7 @@ def package_skill(outputs):
         for path, content in sorted(outputs.items()):
             if path.startswith(prefix):
                 entry = ZipInfo(path.removeprefix(prefix), date_time=(1980, 1, 1, 0, 0, 0))
+                entry.create_system = 3
                 entry.compress_type = ZIP_DEFLATED
                 entry.external_attr = 0o100644 << 16
                 archive.writestr(entry, content.encode("utf-8"))
@@ -204,6 +206,7 @@ def package_web(outputs):
         for path in sorted(paths):
             content = outputs[path] if path in outputs else (ROOT / path).read_text(encoding="utf-8")
             entry = ZipInfo(path, date_time=(1980, 1, 1, 0, 0, 0))
+            entry.create_system = 3
             entry.compress_type = ZIP_DEFLATED
             entry.external_attr = 0o100644 << 16
             archive.writestr(entry, content.encode("utf-8"))

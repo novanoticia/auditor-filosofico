@@ -17,6 +17,14 @@ import build
 
 
 class WebSkillPackages(unittest.TestCase):
+    def test_packages_match_across_host_platforms(self):
+        outputs = build.render()
+        packages = []
+        for platform in ("linux", "win32"):
+            with patch("zipfile.sys.platform", platform):
+                packages.append(build.render_web_packages(outputs))
+        self.assertEqual(packages[0], packages[1])
+
     def test_importable_zip_and_standalone_have_complete_method(self):
         outputs = build.render()
         source_root = build.ROOT
