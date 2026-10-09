@@ -35,6 +35,8 @@ El módulo epistémico trabaja principalmente sobre respaldo de afirmaciones y d
 9. Se mantiene la autocrítica también en profundidad rápida. Las pautas de extensión se coordinan con ese formato abreviado.
 10. La identidad del autor, intenciones y estados psicológicos no se deducen automáticamente de un fallo en el texto.
 11. El auditor pide el objeto imprescindible ausente antes de emitir conclusiones que dependan de él. Cuando dispone de un extracto suficiente, delimita el análisis parcial y evita extrapolar al documento completo.
+12. Las contradicciones requieren proposiciones incompatibles con referentes, tiempos y sentidos comparables; las correcciones textuales deben existir en el material leído. La cobertura de lectura, las fuentes y la incertidumbre se comprueban antes de cerrar el informe.
+13. Las atribuciones no localizadas permanecen sin verificar. En textos literarios se separan autor y voces, se examinan interpretaciones alternativas y se ajustan los criterios y las recomendaciones al género y al encargo.
 
 ## Desarrollo posterior
 

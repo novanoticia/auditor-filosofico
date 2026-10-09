@@ -112,5 +112,53 @@
     "contexto": "Auditor seleccionado; ambas posturas están disponibles y el usuario solicita el enfoque conceptual y filosófico.",
     "entrada": "Auditor Filosófico: comparación conceptual y filosófica rápida. A: actuar libremente significa actuar sin coerción externa. B: actuar libremente exige poder haber elegido otra cosa en las mismas circunstancias.",
     "expectativas": ["Respeta el enfoque conceptual y filosófico solicitado", "Compara ambas definiciones sobre dimensiones comunes", "Incluye una síntesis conjunta del desacuerdo conceptual", "No se limita a dos informes independientes ni exige un experimento que resuelva por sí solo las definiciones", "Conserva juicio justificado y autocrítica en hasta ocho líneas"]
+  },
+  {
+    "id": "revision-correcciones-contra-original",
+    "contexto": "Auditor seleccionado. Los dos fragmentos transcritos son todo el original disponible y sus páginas están identificadas; no contienen marcas tipográficas adicionales.",
+    "entrada": "Auditor Filosófico: revisa las correcciones de esta IA contra el original. Página 1: «Hablar también es una forma de esperar». Página 2: «Quería que volvieran antes del anochecer». La IA dice: «En la página 2 hay que cambiar volvierán por volvieran; en la página 1 sobran dos asteriscos al final». ¿Qué correcciones están respaldadas?",
+    "expectativas": ["Comprueba cada supuesto error contra el original disponible", "Reconoce que volvieran ya está escrito correctamente y que volvierán no aparece en el original", "Señala que los asteriscos alegados no aparecen en los fragmentos aportados", "Vincula los hallazgos a las páginas y citas reales sin inventar nuevas erratas ni marcas", "Delimita la comprobación a la transcripción disponible"]
+  },
+  {
+    "id": "atribucion-familiar-sin-fuente",
+    "contexto": "Auditor seleccionado, sin búsqueda disponible. No se aporta ninguna fuente que relacione la frase con un autor.",
+    "entrada": "Auditor Filosófico: audita esta atribución. Una tarjeta presenta «La duda es el banco donde descansan las certezas» como frase de un filósofo, pero no identifica obra ni edición. Me resulta familiar y no he encontrado su origen. ¿Puedo declararla apócrifa o publicarla con la fórmula «se atribuye a»?",
+    "expectativas": ["Distingue familiaridad estilística de evidencia de autoría", "Trata la atribución como no verificada y explica qué evidencia falta", "No deduce que la frase sea apócrifa solo porque no se encontró su origen", "No recomienda se atribuye a como sustituto de un respaldo ausente", "No inventa un filósofo, una obra, una búsqueda ni una cita verificadora"]
+  },
+  {
+    "id": "cronologia-anclas-distintas",
+    "contexto": "Auditor seleccionado; se aporta íntegro un breve fragmento narrativo.",
+    "entrada": "Auditor Filosófico: examina la coherencia de este fragmento: «Seis años antes de abrir la librería estudié encuadernación. A los seis años de trabajar en la librería me mudé de ciudad». ¿Hay una contradicción temporal?",
+    "expectativas": ["Distingue el intervalo anterior a la apertura de la librería del tiempo trabajado antes de la mudanza", "Reconoce que los dos intervalos pueden coexistir", "No convierte la repetición de seis años en fechas incompatibles de un mismo suceso", "Explica el juicio con los referentes temporales del fragmento"]
+  },
+  {
+    "id": "cronologia-mismo-suceso-incompatible",
+    "contexto": "Auditor seleccionado. Ambas frases pertenecen al mismo relato y se refieren al mismo año; no se aporta un cambio de calendario ni de perspectiva.",
+    "entrada": "Auditor Filosófico: revisa la coherencia de estos dos pasajes. Primero: «Mi única mudanza de aquel año ocurrió el 4 de marzo». Después: «Aquella misma mudanza ocurrió el 7 de marzo». El texto no aporta ninguna explicación de la diferencia.",
+    "expectativas": ["Detecta la incompatibilidad entre las dos fechas atribuidas expresamente a la misma mudanza", "Cita ambos pasajes para justificar el hallazgo", "No diluye la discrepancia en una cautela genérica ni inventa dos mudanzas distintas", "Propone aclarar o corregir la fecha sin atribuir engaño ni intenciones al autor"]
+  },
+  {
+    "id": "alcance-ambiguo-la-mayor",
+    "contexto": "Auditor seleccionado; solo está disponible el fragmento indicado, sin información sobre parentescos ni edades.",
+    "entrada": "Auditor Filosófico: audita este fragmento: «Éramos varias alrededor de la mesa. Yo era la mayor y terminé hablando por todas». ¿Permite concluir que la narradora es la hermana mayor de su familia?",
+    "expectativas": ["Reconoce que el grupo de comparación y el parentesco no están determinados", "No concluye que la narradora sea la hermana mayor de una familia", "No inventa hermanas, edades ni composición familiar", "Distingue una posible lectura de un dato confirmado y explica qué contexto permitiría resolverla"]
+  },
+  {
+    "id": "integracion-personal-y-exhaustividad",
+    "contexto": "Auditor seleccionado; fragmento de un ensayo literario, sin pretensión de definir formalmente sus términos.",
+    "entrada": "Auditor Filosófico: analiza si estos pasajes se contradicen: «Me reconozco completa aun con mis pérdidas». Más adelante: «Completar cada tarea y satisfacer cada deseo sería una cárcel». Examina también una interpretación que permita que ambos convivan.",
+    "expectativas": ["Distingue la integración o aceptación personal de la exigencia de completar todas las tareas y deseos", "Considera esa lectura alternativa antes de declarar una contradicción", "No trata completa y completar como el mismo predicado solo por compartir raíz", "Justifica su interpretación con ambos pasajes y conserva sus límites interpretativos"]
+  },
+  {
+    "id": "voz-literaria-y-final-ambiguo",
+    "contexto": "Auditor seleccionado. Se trata de ficción en primera persona; no se aporta información biográfica del autor ni una petición de recomendaciones de publicación.",
+    "entrada": "Auditor Filosófico: audita filosóficamente este final de un relato: «Mañana no habrá quien responda por mí. Cerré los ojos; la casa se quedó sin voz». Examina qué permite afirmar el texto sobre la desaparición de la narradora y su significado.",
+    "expectativas": ["Distingue narradora y autor", "Reconoce que el final admite lecturas de muerte, ausencia o cierre metafórico sin fijar una como hecho demostrado", "No convierte una posible muerte del personaje en una prescripción moral del autor", "No diagnostica al autor a partir de la voz ficticia", "No añade automáticamente advertencias editoriales o de publicación ajenas al encargo"]
+  },
+  {
+    "id": "revision-ia-veredicto-y-autocritica",
+    "contexto": "Auditor seleccionado. Se revisa una respuesta de IA aportada por el usuario; no se dispone de sus registros de búsqueda ni de fuentes externas para verificar la atribución.",
+    "entrada": "Auditor Filosófico: revisa esta respuesta de otra IA. Veredicto: «He demostrado que la cita es apócrifa». Justificación: «No encontré una fuente que confirme la autoría». Autocrítica: «No consulté una edición completa y la ausencia de resultados no prueba que la cita sea falsa». La respuesta no incluye enlaces ni pasajes consultados.",
+    "expectativas": ["Detecta que el veredicto excede la evidencia y contradice la limitación reconocida en la autocrítica", "Propone una conclusión de atribución no verificada mientras no haya evidencia suficiente de falsedad", "Hace que la incertidumbre modifique el veredicto y no quede solo en una salvedad final", "Señala la falta de trazabilidad de la supuesta verificación", "No afirma que la IA fingió buscar ni resuelve por sí mismo la autoría sin fuentes"]
   }
 ]
