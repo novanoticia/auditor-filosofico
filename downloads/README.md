@@ -12,3 +12,5 @@ Estos archivos están incluidos en Git y corresponden al código de su revisión
 No edites los ZIP a mano. `python3 scripts/build.py` los regenera desde el método y `project.json`; `--check` comprueba también que los ZIP no falten ni estén desactualizados. `--package` copia esos mismos bytes a `.artifacts/` para adjuntarlos a la release.
 
 Al cambiar la versión de `project.json` en `main`, el workflow regenera y guarda las adaptaciones y los ZIP, valida el resultado y publica la release. Incluye las notas en `docs/releases/v<versión>.md` antes de publicar una versión nueva; también hay ejecución manual del workflow.
+
+Cada ejecución parte del commit que la activó, aunque `main` avance mientras espera. Si debe guardar archivos regenerados y la rama ha avanzado, el push normal se rechaza y la publicación se detiene; revisa el estado de `main` antes de lanzar una nueva ejecución manual. No se fuerza la escritura de la rama.

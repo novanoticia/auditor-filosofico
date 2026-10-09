@@ -5,6 +5,7 @@ import argparse
 from io import BytesIO
 import json
 from pathlib import Path
+import re
 import sys
 from zipfile import ZIP_DEFLATED, ZIP_STORED, ZipFile, ZipInfo
 
@@ -21,8 +22,21 @@ def yaml_string(value):
     return json.dumps(value, ensure_ascii=False)
 
 
-def render():
+def load_config():
     config = json.loads((ROOT / "project.json").read_text(encoding="utf-8"))
+    fields = ("name", "display_name", "version", "license", "repository", "description")
+    if not isinstance(config, dict):
+        raise ValueError("project.json debe contener un objeto")
+    for field in fields:
+        if not isinstance(config.get(field), str) or not config[field].strip():
+            raise ValueError(f"project.json: {field} debe ser una cadena no vacía")
+    if not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", config["version"]):
+        raise ValueError("project.json: la versión debe ser X.Y.Z")
+    return config
+
+
+def render():
+    config = load_config()
     core = (ROOT / "src/core.md").read_text(encoding="utf-8").strip()
     modules = {
         name: (ROOT / f"src/{name}.md").read_text(encoding="utf-8").strip()
@@ -172,6 +186,7 @@ def render_web_packages(outputs):
                 "LICENSE": outputs["skills/auditor-filosofico/LICENSE"],
             }.items():
                 entry = ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
+                entry.create_system = 3  # Fixed Unix metadata, including on Windows.
                 entry.compress_type = ZIP_STORED
                 entry.external_attr = 0o100644 << 16
                 archive.writestr(entry, content.encode("utf-8"))
@@ -187,6 +202,7 @@ def package_skill(outputs):
         for path, content in sorted(outputs.items()):
             if path.startswith(prefix):
                 entry = ZipInfo(path.removeprefix(prefix), date_time=(1980, 1, 1, 0, 0, 0))
+                entry.create_system = 3
                 entry.compress_type = ZIP_DEFLATED
                 entry.external_attr = 0o100644 << 16
                 archive.writestr(entry, content.encode("utf-8"))
@@ -204,6 +220,7 @@ def package_web(outputs):
         for path in sorted(paths):
             content = outputs[path] if path in outputs else (ROOT / path).read_text(encoding="utf-8")
             entry = ZipInfo(path, date_time=(1980, 1, 1, 0, 0, 0))
+            entry.create_system = 3
             entry.compress_type = ZIP_DEFLATED
             entry.external_attr = 0o100644 << 16
             archive.writestr(entry, content.encode("utf-8"))
@@ -224,7 +241,11 @@ def main():
     parser.add_argument("--check", action="store_true", help="Detecta adaptaciones desactualizadas")
     parser.add_argument("--package", action="store_true", help="Genera los ZIP de la skill y los chats web")
     args = parser.parse_args()
-    outputs = render()
+    try:
+        outputs = render()
+    except (OSError, ValueError) as error:
+        print(f"No se puede generar el paquete: {error}", file=sys.stderr)
+        return 1
     generated = {**outputs, **render_web_packages(outputs)}
     stale = []
     for relative, content in generated.items():

@@ -6,13 +6,24 @@ from pathlib import Path
 import re
 import sys
 
-from build import ROOT, render, render_web_packages
+from build import ROOT, load_config, render, render_web_packages
+
+
+def local_directory(base, value):
+    """Accept only existing relative directories contained in their package."""
+    if not isinstance(value, str) or not value.strip() or Path(value).is_absolute():
+        return False
+    root = (base / value).resolve()
+    return root.is_relative_to(base.resolve()) and root.is_dir()
 
 
 def validate():
     errors = []
-    outputs = render()
-    config = json.loads((ROOT / "project.json").read_text(encoding="utf-8"))
+    try:
+        config = load_config()
+        outputs = render()
+    except (OSError, ValueError) as error:
+        return [f"No se pueden leer las fuentes del paquete: {error}"]
     for relative, expected in {**outputs, **render_web_packages(outputs)}.items():
         path = ROOT / relative
         expected_bytes = expected if isinstance(expected, bytes) else expected.encode("utf-8")
@@ -24,21 +35,26 @@ def validate():
             continue
         try:
             value = json.loads(path.read_text(encoding="utf-8"))
-        except (ValueError, UnicodeError) as error:
+        except (OSError, ValueError) as error:
             errors.append(f"JSON inválido: {path.relative_to(ROOT)}: {error}")
+            continue
+        if path.name in ("plugin.json", "marketplace.json") and not isinstance(value, dict):
+            errors.append(f"Manifiesto inválido (se esperaba un objeto): {path.relative_to(ROOT)}")
             continue
         if path.name == "plugin.json":
             if value.get("name") != config["name"] or value.get("version") != config["version"]:
                 errors.append(f"Nombre/versión incoherente: {path.relative_to(ROOT)}")
-            if "skills" in value and not (path.parent.parent / value["skills"]).is_dir():
-                errors.append(f"Directorio de skills ausente: {path.relative_to(ROOT)}")
+            if "skills" in value and not local_directory(path.parent.parent, value["skills"]):
+                errors.append(f"Directorio de skills fuera del plugin, inválido o ausente: {path.relative_to(ROOT)}")
         if path.name == "marketplace.json":
+            if not isinstance(value.get("plugins"), list):
+                errors.append(f"Lista de plugins inválida: {path.relative_to(ROOT)}")
+                continue
             for plugin in value["plugins"]:
-                source = plugin["source"]
-                relative = source["path"] if isinstance(source, dict) else source
-                root = (ROOT / relative).resolve()
-                if not root.is_relative_to(ROOT) or not root.is_dir():
-                    errors.append(f"Plugin fuera del paquete o ausente: {relative}")
+                source = plugin.get("source") if isinstance(plugin, dict) else None
+                relative = source.get("path") if isinstance(source, dict) else source
+                if not local_directory(ROOT, relative):
+                    errors.append(f"Plugin fuera del paquete, inválido o ausente: {path.relative_to(ROOT)}: {relative}")
 
     for path in ROOT.rglob("*.md"):
         if ".git" in path.parts or "references/originales" in path.as_posix():
