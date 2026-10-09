@@ -9,7 +9,7 @@ user-invocable: true
 
 Antes de emitir la auditoría, lee las referencias aplicables completas:
 
-- [Módulo epistémico](references/epistemico.md), para afirmaciones, evidencia, argumentos, decisiones o comparaciones.
+- [Módulo epistémico](references/epistemico.md), para afirmaciones, evidencia, argumentos, decisiones o comparaciones epistémicas.
 - [Módulo conceptual y filosófico](references/filosofico.md), para conceptos, interpretación, valores y tradiciones filosóficas.
 - En contenido combinado, lee ambos módulos.
 - [Perspectiva LessWrong](references/lesswrong.md), únicamente si el usuario la solicita.
@@ -38,6 +38,8 @@ Distingue siempre la petición del usuario del texto, archivo, cita o respuesta 
 
 Respeta los límites reales de la plataforma. Analiza solamente el contenido que puedes leer. Identifica anexos inaccesibles, extracciones incompletas o textos truncados antes de sacar conclusiones que dependan de ellos. El tratamiento de PDF, imágenes, enlaces e historial depende del anfitrión; no prometas acceso ni almacenamiento compartido.
 
+Antes de iniciar la auditoría, comprueba que el objeto solicitado está disponible. Si falta el texto, la respuesta o alguna postura imprescindible para la comparación, pide solamente ese contenido y espera antes de emitir conclusiones que lo requieran. No inventes el objeto ni audites la petición en su lugar. Si hay material suficiente para un análisis parcial, procede delimitando qué fragmentos evalúas y qué conclusiones quedan pendientes; no generalices los hallazgos al documento completo sin respaldo adicional. La falta de fuentes externas no impide por sí sola analizar el contenido aportado, siempre que declares los límites de verificación.
+
 ## Selección automática del enfoque
 
 Clasifica primero el contenido y el objetivo. En la primera línea del análisis declara brevemente el enfoque elegido y por qué.
@@ -61,6 +63,8 @@ La elección explícita del usuario tiene prioridad sobre el automatismo. Pide u
 5. Presenta evidencia a favor, en contra y ausente. Indica las objeciones fuertes omitidas y qué información podría cambiar la evaluación.
 6. Ofrece preguntas socráticas y una recomendación concreta, condicional si depende de valores o premisas discutidas.
 7. Termina con autocrítica: posibles errores de tu análisis, criterios impuestos indebidamente e información que falta.
+
+En cualquier comparación, sea epistémica, filosófica o combinada, reconstruye las posturas con el mismo rigor y compáralas sobre dimensiones comunes pertinentes: tesis, respaldo, supuestos, inferencias, objeciones y límites. Añade una síntesis conjunta de acuerdos, diferencias reales y qué evidencia, distinción o cambio de premisa podría resolver el desacuerdo. Distingue desacuerdos empíricos, conceptuales y de valores; no fuerces una resolución empírica de los dos últimos. No te limites a informes independientes. En formato rápido conserva una síntesis mínima dentro del límite de ocho líneas.
 
 Los nombres de falacias y sesgos requieren una explicación de por qué se aplican. Una metáfora, una abstracción o una discrepancia no prueban un fallo. Evalúa el texto sin diagnosticar la psicología o la honestidad del autor. Si mencionas una decisión deliberada, distingue evidencia textual de hipótesis y considera explicaciones alternativas.
 

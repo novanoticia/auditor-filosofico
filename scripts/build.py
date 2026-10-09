@@ -53,7 +53,7 @@ def render():
         "## Referencias que debes cargar\n\n"
         "Antes de emitir la auditoría, lee las referencias aplicables completas:\n\n"
         "- [Módulo epistémico](references/epistemico.md), para afirmaciones, "
-        "evidencia, argumentos, decisiones o comparaciones.\n"
+        "evidencia, argumentos, decisiones o comparaciones epistémicas.\n"
         "- [Módulo conceptual y filosófico](references/filosofico.md), para "
         "conceptos, interpretación, valores y tradiciones filosóficas.\n"
         "- En contenido combinado, lee ambos módulos.\n"
@@ -175,65 +175,86 @@ def render():
     return outputs
 
 
+def encode_outputs(outputs):
+    encoded = {}
+    for path, content in outputs.items():
+        try:
+            encoded[path] = content if isinstance(content, bytes) else content.encode("utf-8")
+        except UnicodeError as error:
+            raise ValueError(f"{path}: no se puede codificar como UTF-8 ({error})") from error
+    return encoded
+
+
+def render_archive(contents, compression):
+    contents = encode_outputs(contents)
+    buffer = BytesIO()
+    with ZipFile(buffer, "w", compression=compression) as archive:
+        for path, content in contents.items():
+            entry = ZipInfo(path, date_time=(1980, 1, 1, 0, 0, 0))
+            entry.create_system = 3  # Fixed Unix metadata, including on Windows.
+            entry.compress_type = compression
+            entry.external_attr = 0o100644 << 16
+            archive.writestr(entry, content)
+    return buffer.getvalue()
+
+
 def render_web_packages(outputs):
-    packages = {}
-    for platform in WEB_ADAPTERS:
-        buffer = BytesIO()
-        # ZIP_STORED avoids differences between zlib versions in local builds and CI.
-        with ZipFile(buffer, "w", compression=ZIP_STORED) as archive:
-            for name, content in {
-                "SKILL.md": outputs[f"adapters/{platform}/SKILL.md"],
-                "LICENSE": outputs["skills/auditor-filosofico/LICENSE"],
-            }.items():
-                entry = ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
-                entry.create_system = 3  # Fixed Unix metadata, including on Windows.
-                entry.compress_type = ZIP_STORED
-                entry.external_attr = 0o100644 << 16
-                archive.writestr(entry, content.encode("utf-8"))
-        packages[f"downloads/auditor-filosofico-{platform}-skill.zip"] = buffer.getvalue()
-    return packages
+    # ZIP_STORED avoids differences between zlib versions in local builds and CI.
+    return {
+        f"downloads/auditor-filosofico-{platform}-skill.zip": render_archive({
+            "SKILL.md": outputs[f"adapters/{platform}/SKILL.md"],
+            "LICENSE": outputs["skills/auditor-filosofico/LICENSE"],
+        }, ZIP_STORED)
+        for platform in WEB_ADAPTERS
+    }
+
+
+def render_skill_package(outputs):
+    prefix = "skills/"
+    return render_archive({
+        path.removeprefix(prefix): content
+        for path, content in sorted(outputs.items()) if path.startswith(prefix)
+    }, ZIP_DEFLATED)
+
+
+def render_web_package(outputs):
+    paths = ["LICENSE", "docs/chats-web.md", "evals/README.md", "evals/casos.json"] + [
+        f"prompts/{prefix}-{platform}.md"
+        for platform in WEB_ADAPTERS
+        for prefix in ("auditor-filosofico", "instrucciones-breves")
+    ] + [f"adapters/{platform}/SKILL.md" for platform in WEB_ADAPTERS]
+    return render_archive({
+        path: outputs[path] if path in outputs else (ROOT / path).read_text(encoding="utf-8")
+        for path in sorted(paths)
+    }, ZIP_DEFLATED)
+
+
+def write_files(files):
+    for relative, content in files.items():
+        target = ROOT / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(content)
+
+
+def write_packages(packages, label="Paquete"):
+    write_files(packages)
+    for relative in packages:
+        print(f"{label}: {relative}")
 
 
 def package_skill(outputs):
-    target = ROOT / ".artifacts/auditor-filosofico-skill.zip"
-    target.parent.mkdir(parents=True, exist_ok=True)
-    prefix = "skills/"
-    with ZipFile(target, "w", compression=ZIP_DEFLATED) as archive:
-        for path, content in sorted(outputs.items()):
-            if path.startswith(prefix):
-                entry = ZipInfo(path.removeprefix(prefix), date_time=(1980, 1, 1, 0, 0, 0))
-                entry.create_system = 3
-                entry.compress_type = ZIP_DEFLATED
-                entry.external_attr = 0o100644 << 16
-                archive.writestr(entry, content.encode("utf-8"))
-    print(f"Paquete: {target.relative_to(ROOT)}")
+    write_packages({".artifacts/auditor-filosofico-skill.zip": render_skill_package(outputs)})
 
 
 def package_web(outputs):
-    target = ROOT / ".artifacts/auditor-filosofico-chats-web.zip"
-    with ZipFile(target, "w", compression=ZIP_DEFLATED) as archive:
-        paths = ["LICENSE", "docs/chats-web.md", "evals/README.md", "evals/casos.json"] + [
-            f"prompts/{prefix}-{platform}.md"
-            for platform in WEB_ADAPTERS
-            for prefix in ("auditor-filosofico", "instrucciones-breves")
-        ] + [f"adapters/{platform}/SKILL.md" for platform in WEB_ADAPTERS]
-        for path in sorted(paths):
-            content = outputs[path] if path in outputs else (ROOT / path).read_text(encoding="utf-8")
-            entry = ZipInfo(path, date_time=(1980, 1, 1, 0, 0, 0))
-            entry.create_system = 3
-            entry.compress_type = ZIP_DEFLATED
-            entry.external_attr = 0o100644 << 16
-            archive.writestr(entry, content.encode("utf-8"))
-    print(f"Paquete: {target.relative_to(ROOT)}")
+    write_packages({".artifacts/auditor-filosofico-chats-web.zip": render_web_package(outputs)})
 
 
 def package_web_skills(outputs):
-    directory = ROOT / ".artifacts"
-    directory.mkdir(parents=True, exist_ok=True)
-    for relative, content in render_web_packages(outputs).items():
-        target = directory / Path(relative).name
-        target.write_bytes(content)
-        print(f"Skill importable: {target.relative_to(ROOT)}")
+    write_packages({
+        f".artifacts/{Path(relative).name}": content
+        for relative, content in render_web_packages(outputs).items()
+    }, label="Skill importable")
 
 
 def main():
@@ -243,27 +264,34 @@ def main():
     args = parser.parse_args()
     try:
         outputs = render()
+        generated = encode_outputs(outputs)
+        web_packages = render_web_packages(outputs)
+        generated.update(web_packages)
+        packages = {}
+        if args.package:
+            # Read and encode every input before writing adapters or release archives.
+            packages = {
+                ".artifacts/auditor-filosofico-skill.zip": render_skill_package(outputs),
+                ".artifacts/auditor-filosofico-chats-web.zip": render_web_package(outputs),
+                **{
+                    f".artifacts/{Path(relative).name}": content
+                    for relative, content in web_packages.items()
+                },
+            }
+        if args.check:
+            stale = [
+                relative for relative, expected in generated.items()
+                if not (ROOT / relative).is_file() or (ROOT / relative).read_bytes() != expected
+            ]
+            if stale:
+                print("Regenera con python3 scripts/build.py:\n" + "\n".join(stale), file=sys.stderr)
+                return 1
+        else:
+            write_files(generated)
+        write_packages(packages)
     except (OSError, ValueError) as error:
         print(f"No se puede generar el paquete: {error}", file=sys.stderr)
         return 1
-    generated = {**outputs, **render_web_packages(outputs)}
-    stale = []
-    for relative, content in generated.items():
-        path = ROOT / relative
-        expected = content if isinstance(content, bytes) else content.encode("utf-8")
-        if args.check:
-            if not path.is_file() or path.read_bytes() != expected:
-                stale.append(relative)
-        else:
-            path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_bytes(expected)
-    if stale:
-        print("Regenera con python3 scripts/build.py:\n" + "\n".join(stale), file=sys.stderr)
-        return 1
-    if args.package:
-        package_skill(outputs)
-        package_web(outputs)
-        package_web_skills(outputs)
     print(f"{len(generated)} archivos {'sincronizados' if args.check else 'generados'}.")
     return 0
 

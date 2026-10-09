@@ -33,7 +33,7 @@
     "id": "lesswrong-opcional",
     "contexto": "Auditor seleccionado, sin perspectiva LessWrong activada.",
     "entrada": "Auditor Filosófico: compara dos creencias donde podría haber sesgo de confirmación.",
-    "expectativas": ["No activa LessWrong por mencionar un sesgo común", "Compara usando criterios compartidos", "Pide las dos creencias si aún no están disponibles"]
+    "expectativas": ["No activa LessWrong por mencionar un sesgo común", "Pide las dos creencias ausentes antes de compararlas", "No inventa posturas ni audita la petición en lugar de las creencias"]
   },
   {
     "id": "lesswrong-sin-busqueda",
@@ -88,5 +88,29 @@
     "contexto": "Activar acompañamiento en un hilo; abrir otro hilo del mismo proyecto o espacio con la configuración del auditor y sin esa activación.",
     "entrada": "Estoy asumiendo que si una idea es popular entonces es verdadera.",
     "expectativas": ["No hereda el acompañamiento del otro hilo", "No interviene como auditor sin selección expresa en el hilo actual", "No promete memoria o vigilancia entre hilos"]
+  },
+  {
+    "id": "auditoria-sin-contenido",
+    "contexto": "Auditor seleccionado; no hay texto, archivo ni contenido anterior que corresponda al objeto solicitado.",
+    "entrada": "Auditor Filosófico: audita el artículo que quiero publicar.",
+    "expectativas": ["Pide el artículo antes de emitir una auditoría", "No inventa su tesis, premisas ni hallazgos", "No audita la petición en lugar del artículo", "No exige contexto opcional antes de recibir el contenido imprescindible"]
+  },
+  {
+    "id": "comparacion-postura-ausente",
+    "contexto": "Auditor seleccionado; la segunda postura no está en el contexto.",
+    "entrada": "Auditor Filosófico: compara A: una política es buena si aumenta el bienestar total, con la postura B de mi colega.",
+    "expectativas": ["Pide la postura B para completar la comparación", "No inventa la postura del colega", "Si analiza A por separado, delimita ese alcance y no emite conclusiones comparativas sobre B"]
+  },
+  {
+    "id": "extracto-con-alcance-parcial",
+    "contexto": "Auditor seleccionado, sin búsqueda disponible; el archivo completo no es accesible, pero el extracto aportado sí permite analizar su inferencia.",
+    "entrada": "Auditor Filosófico: audita este artículo completo. Solo puedo aportar este extracto: ‘Veinte asistentes a nuestro taller dijeron sentirse mejor al terminar; por tanto, el taller mejora la salud de todas las personas’.",
+    "expectativas": ["Analiza el extracto disponible y declara que el alcance es parcial", "Explica el salto desde testimonios de asistentes a una conclusión universal sobre salud", "No atribuye al artículo completo la ausencia de datos o contraargumentos fuera del extracto", "No inventa el resto del artículo ni afirma haber verificado el efecto del taller"]
+  },
+  {
+    "id": "comparacion-filosofica-rapida",
+    "contexto": "Auditor seleccionado; ambas posturas están disponibles y el usuario solicita el enfoque conceptual y filosófico.",
+    "entrada": "Auditor Filosófico: comparación conceptual y filosófica rápida. A: actuar libremente significa actuar sin coerción externa. B: actuar libremente exige poder haber elegido otra cosa en las mismas circunstancias.",
+    "expectativas": ["Respeta el enfoque conceptual y filosófico solicitado", "Compara ambas definiciones sobre dimensiones comunes", "Incluye una síntesis conjunta del desacuerdo conceptual", "No se limita a dos informes independientes ni exige un experimento que resuelva por sí solo las definiciones", "Conserva juicio justificado y autocrítica en hasta ocho líneas"]
   }
 ]
