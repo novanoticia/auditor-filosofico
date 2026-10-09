@@ -33,7 +33,12 @@ Esta primera versión distribuye el método mediante instrucciones. La búsqueda
 
 Para **Le Chat y Perplexity**, sigue la [guía de chats web](docs/chats-web.md). Puedes copiar el [prompt de Le Chat](prompts/auditor-filosofico-le-chat.md) o el [prompt de Perplexity](prompts/auditor-filosofico-perplexity.md) directamente en una conversación. No requieren claves de API; su comportamiento en cuentas usuarias está pendiente de evaluación.
 
-Si utilizas **Subir Skills**, sube el ZIP específico `auditor-filosofico-le-chat-skill.zip` o `auditor-filosofico-perplexity-skill.zip` generado en `.artifacts/`, o el Markdown correspondiente de [Le Chat](adapters/le-chat/SKILL.md) o [Perplexity](adapters/perplexity/SKILL.md). Ambos contienen el método completo y metadatos YAML. El ZIP de distribución `auditor-filosofico-chats-web.zip` se extrae; no sirve para ese importador.
+Si utilizas **Subir Skills**, descarga y sube directamente el ZIP de tu plataforma:
+
+- [Mistral Le Chat: descargar ZIP](https://github.com/novanoticia/auditor-filosofico/raw/refs/heads/main/downloads/auditor-filosofico-le-chat-skill.zip).
+- [Perplexity: descargar ZIP](https://github.com/novanoticia/auditor-filosofico/raw/refs/heads/main/downloads/auditor-filosofico-perplexity-skill.zip).
+
+Los ZIP están incluidos en [downloads/](downloads/README.md) y contienen el método completo, metadatos YAML y `SKILL.md` en la raíz. También puedes importar el Markdown de [Le Chat](adapters/le-chat/SKILL.md) o [Perplexity](adapters/perplexity/SKILL.md). El ZIP de distribución `auditor-filosofico-chats-web.zip` se extrae; no sirve para ese importador.
 
 ## Método
 
@@ -60,6 +65,8 @@ python3 scripts/build.py --package
 El último comando crea cuatro ZIP en `.artifacts/`: la skill genérica, el paquete de distribución para chats web y dos skills importables para Le Chat y Perplexity con `SKILL.md` en la raíz. La generación mantiene las adaptaciones sincronizadas y autocontenidas. Los [casos de evaluación](evals/casos.json) sirven para comprobar el comportamiento en cada modelo; la validación de archivos no ejecuta esas auditorías ni garantiza sus resultados.
 
 La propuesta de alcance y los cambios respecto de los adjuntos están en [las decisiones de diseño](docs/diseno.md). Los [originales aportados](references/originales/README.md) conservan su contenido histórico. El proyecto se distribuye bajo la [licencia MIT](LICENSE).
+
+`python3 scripts/build.py` también regenera los ZIP versionados de `downloads/`; `--check` comprueba que coincidan con las fuentes. Al cambiar la versión en `project.json` en `main`, GitHub Actions regenera y guarda los archivos y publica la release automáticamente. Añade previamente sus notas en `docs/releases/v<versión>.md`. Consulta las [descargas y generación por versión](downloads/README.md).
 
 *Dedicado a Francisco José García Carbonell.*
 

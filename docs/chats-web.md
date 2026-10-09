@@ -8,10 +8,10 @@ Si tu interfaz muestra **Subir Skills** y pide un ZIP con `SKILL.md` en el nivel
 
 | Chat | ZIP para subir directamente | Markdown independiente alternativo |
 | --- | --- | --- |
-| Mistral Le Chat | `auditor-filosofico-le-chat-skill.zip` | [adapters/le-chat/SKILL.md](../adapters/le-chat/SKILL.md) |
-| Perplexity | `auditor-filosofico-perplexity-skill.zip` | [adapters/perplexity/SKILL.md](../adapters/perplexity/SKILL.md) |
+| Mistral Le Chat | [Descargar ZIP de Mistral](https://github.com/novanoticia/auditor-filosofico/raw/refs/heads/main/downloads/auditor-filosofico-le-chat-skill.zip) | [adapters/le-chat/SKILL.md](../adapters/le-chat/SKILL.md) |
+| Perplexity | [Descargar ZIP de Perplexity](https://github.com/novanoticia/auditor-filosofico/raw/refs/heads/main/downloads/auditor-filosofico-perplexity-skill.zip) | [adapters/perplexity/SKILL.md](../adapters/perplexity/SKILL.md) |
 
-Genera los ZIP con `python3 scripts/build.py --package`; se guardan en `.artifacts/`. Sube **solo uno**, el correspondiente al chat. Cada ZIP contiene `SKILL.md` en la raíz y `LICENSE`. El Markdown tiene metadatos YAML `name` y `description` y todo el método incorporado, sin referencias externas necesarias.
+Los ZIP ya están incluidos en `downloads/` del repositorio. Sube **solo uno**, el correspondiente al chat, sin descomprimirlo. Cada ZIP contiene `SKILL.md` en la raíz y `LICENSE`. El Markdown tiene metadatos YAML `name`, `description` y la versión, con todo el método incorporado. Para regenerarlos utiliza `python3 scripts/build.py`; `--package` también los copia a `.artifacts/` para la release. Cada cambio de versión en `main` activa la regeneración y publicación automáticas.
 
 Después de importar, selecciona o habilita la skill según el cliente y escribe «Auditor Filosófico: analiza este texto: …». No necesitas adjuntar otro archivo ni pegar las instrucciones breves cuando utilizas esta skill autocontenida.
 
