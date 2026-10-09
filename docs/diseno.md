@@ -18,6 +18,8 @@
 
 También genera `adapters/<plataforma>/SKILL.md`: metadatos YAML y método completo incorporado. Cada skill se empaqueta en su propio ZIP con `SKILL.md` en la raíz, conforme al requisito mostrado por el importador en la captura del usuario. Se mantiene aparte el ZIP de distribución con varios documentos. Las pruebas de regresión verifican raíz, metadatos, módulos completos, licencia y generación determinista.
 
+Los ZIP importables se guardan en `downloads/` y se incluyen en Git. La generación normal los sincroniza y `--check` verifica sus bytes. La versión de `project.json` se incorpora al YAML de las skills. Se utiliza ZIP sin compresión para que el resultado no cambie entre versiones de zlib. El workflow de publicación responde a cambios de versión en `main`, regenera y guarda los archivos, los valida y publica la release con notas específicas por versión.
+
 El módulo epistémico trabaja principalmente sobre respaldo de afirmaciones y decisiones. El módulo filosófico especializa criterios conceptuales, interpretativos, normativos y por tradición. En contenido mixto se utilizan ambos, con una reconstrucción compartida del argumento. La clasificación es provisional y admite elección explícita del usuario.
 
 ## Adaptaciones respecto de los originales

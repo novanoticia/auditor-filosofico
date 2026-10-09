@@ -6,16 +6,17 @@ from pathlib import Path
 import re
 import sys
 
-from build import ROOT, render
+from build import ROOT, render, render_web_packages
 
 
 def validate():
     errors = []
     outputs = render()
     config = json.loads((ROOT / "project.json").read_text(encoding="utf-8"))
-    for relative, expected in outputs.items():
+    for relative, expected in {**outputs, **render_web_packages(outputs)}.items():
         path = ROOT / relative
-        if not path.is_file() or path.read_text(encoding="utf-8") != expected:
+        expected_bytes = expected if isinstance(expected, bytes) else expected.encode("utf-8")
+        if not path.is_file() or path.read_bytes() != expected_bytes:
             errors.append(f"Adaptación desactualizada: {relative}")
 
     for path in ROOT.rglob("*.json"):

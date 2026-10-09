@@ -2,10 +2,11 @@
 """Generate self-contained adapters from the shared method, using only stdlib."""
 
 import argparse
+from io import BytesIO
 import json
 from pathlib import Path
 import sys
-from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
+from zipfile import ZIP_DEFLATED, ZIP_STORED, ZipFile, ZipInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 MODULES = ("epistemico", "filosofico", "lesswrong")
@@ -141,7 +142,8 @@ def render():
         )
         outputs[f"adapters/{platform}/SKILL.md"] = (
             "---\nname: auditor-filosofico\ndescription: "
-            + yaml_string(description) + "\n---\n\n"
+            + yaml_string(description) + "\nmetadata:\n  version: "
+            + yaml_string(config["version"]) + "\n---\n\n"
             + outputs[f"prompts/{filename}"]
         )
         outputs[f"prompts/instrucciones-breves-{platform}.md"] = (
@@ -157,6 +159,24 @@ def render():
             + adapter + "\n"
         )
     return outputs
+
+
+def render_web_packages(outputs):
+    packages = {}
+    for platform in WEB_ADAPTERS:
+        buffer = BytesIO()
+        # ZIP_STORED avoids differences between zlib versions in local builds and CI.
+        with ZipFile(buffer, "w", compression=ZIP_STORED) as archive:
+            for name, content in {
+                "SKILL.md": outputs[f"adapters/{platform}/SKILL.md"],
+                "LICENSE": outputs["skills/auditor-filosofico/LICENSE"],
+            }.items():
+                entry = ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
+                entry.compress_type = ZIP_STORED
+                entry.external_attr = 0o100644 << 16
+                archive.writestr(entry, content.encode("utf-8"))
+        packages[f"downloads/auditor-filosofico-{platform}-skill.zip"] = buffer.getvalue()
+    return packages
 
 
 def package_skill(outputs):
@@ -193,17 +213,9 @@ def package_web(outputs):
 def package_web_skills(outputs):
     directory = ROOT / ".artifacts"
     directory.mkdir(parents=True, exist_ok=True)
-    for platform in WEB_ADAPTERS:
-        target = directory / f"auditor-filosofico-{platform}-skill.zip"
-        with ZipFile(target, "w", compression=ZIP_DEFLATED) as archive:
-            for name, content in {
-                "SKILL.md": outputs[f"adapters/{platform}/SKILL.md"],
-                "LICENSE": outputs["skills/auditor-filosofico/LICENSE"],
-            }.items():
-                entry = ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
-                entry.compress_type = ZIP_DEFLATED
-                entry.external_attr = 0o100644 << 16
-                archive.writestr(entry, content.encode("utf-8"))
+    for relative, content in render_web_packages(outputs).items():
+        target = directory / Path(relative).name
+        target.write_bytes(content)
         print(f"Skill importable: {target.relative_to(ROOT)}")
 
 
@@ -213,15 +225,17 @@ def main():
     parser.add_argument("--package", action="store_true", help="Genera los ZIP de la skill y los chats web")
     args = parser.parse_args()
     outputs = render()
+    generated = {**outputs, **render_web_packages(outputs)}
     stale = []
-    for relative, content in outputs.items():
+    for relative, content in generated.items():
         path = ROOT / relative
+        expected = content if isinstance(content, bytes) else content.encode("utf-8")
         if args.check:
-            if not path.is_file() or path.read_text(encoding="utf-8") != content:
+            if not path.is_file() or path.read_bytes() != expected:
                 stale.append(relative)
         else:
             path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_text(content, encoding="utf-8")
+            path.write_bytes(expected)
     if stale:
         print("Regenera con python3 scripts/build.py:\n" + "\n".join(stale), file=sys.stderr)
         return 1
@@ -229,7 +243,7 @@ def main():
         package_skill(outputs)
         package_web(outputs)
         package_web_skills(outputs)
-    print(f"{len(outputs)} archivos {'sincronizados' if args.check else 'generados'}.")
+    print(f"{len(generated)} archivos {'sincronizados' if args.check else 'generados'}.")
     return 0
 
 

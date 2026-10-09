@@ -48,6 +48,8 @@ La skill `auditar` requiere invocación explícita mediante el comando o selecto
 
 ## ChatGPT, Claude en chat y otras IAs
 
+Para **Subir Skills** en Mistral y Perplexity puedes descargar directamente el [ZIP de Mistral](https://github.com/novanoticia/auditor-filosofico/raw/refs/heads/main/downloads/auditor-filosofico-le-chat-skill.zip) o el [ZIP de Perplexity](https://github.com/novanoticia/auditor-filosofico/raw/refs/heads/main/downloads/auditor-filosofico-perplexity-skill.zip) y subirlo sin descomprimir. Ambos se incluyen en el repositorio y se regeneran con cada versión; consulta la [guía de chats web](chats-web.md).
+
 Puedes utilizar el método sin plugin nativo:
 
 1. Introduce el [prompt completo](../prompts/auditor-filosofico.md) como configuración inicial y explica que estás configurando al Auditor Filosófico.

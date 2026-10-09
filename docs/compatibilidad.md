@@ -16,6 +16,8 @@ La [guía de chats web](chats-web.md) detalla las rutas de importación y carga 
 
 ## Capacidades del anfitrión
 
+Las skills web se descargan desde el repositorio: [Mistral Le Chat](https://github.com/novanoticia/auditor-filosofico/raw/refs/heads/main/downloads/auditor-filosofico-le-chat-skill.zip) y [Perplexity](https://github.com/novanoticia/auditor-filosofico/raw/refs/heads/main/downloads/auditor-filosofico-perplexity-skill.zip). Incluyen su versión y se generan con el resto de adaptaciones. Las releases conservan cada versión publicada.
+
 - **Fuentes:** la verificación externa requiere búsqueda o acceso real a documentos. La auditoría puede evaluar el texto aportado e identificar qué afirmaciones quedan sin contrastar.
 - **Adjuntos:** PDF, imágenes, documentos y tamaños máximos dependen del cliente. Una referencia a un archivo no garantiza que el modelo pueda leerlo.
 - **Acompañamiento:** se limita a turnos visibles del mismo chat mientras permanezca activado. No programa tareas ni sigue conversaciones de otras plataformas.

@@ -1,16 +1,16 @@
-name: Publicar release v0.1.0
+name: Generar y publicar versión
 
 on:
   push:
     branches: [main]
-    paths: [.github/workflows/release.yml]
+    paths: [project.json]
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: release-v0.1.0
+  group: release
   cancel-in-progress: false
 
 jobs:
@@ -21,16 +21,41 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Comprobar versión y paquete
+      - name: Leer versión y comprobar notas
+        id: version
         run: |
-          python3 -c 'import json; assert json.load(open("project.json"))["version"] == "0.1.0"'
+          python3 - <<'PY'
+          import json, os, re
+          from pathlib import Path
+          version = json.loads(Path('project.json').read_text())['version']
+          assert re.fullmatch(r'\d+\.\d+\.\d+', version), 'La versión debe ser X.Y.Z'
+          tag = 'v' + version
+          notes = 'docs/releases/' + tag + '.md'
+          assert Path(notes).is_file(), 'Faltan notas de release: ' + notes
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('tag=' + tag + '\nnotes=' + notes + '\n')
+          PY
+      - name: Regenerar y validar archivos de la versión
+        run: |
+          python3 scripts/build.py
           python3 scripts/build.py --check
           python3 scripts/validate.py
           python3 -m unittest discover -s tests
           git diff --check
+      - name: Guardar adaptaciones y ZIP en el repositorio
+        run: |
+          git add .agents/plugins/marketplace.json .claude-plugin/marketplace.json plugins skills prompts adapters downloads/*.zip
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Regenerar adaptaciones y ZIP de la versión'
+            git push origin HEAD:main
+          fi
       - name: Preparar descargas
         run: |
           python3 scripts/build.py --check --package
@@ -39,13 +64,18 @@ jobs:
       - name: Calcular sumas de comprobación
         working-directory: .artifacts
         run: sha256sum *.zip *-SKILL.md > SHA256SUMS
-      - name: Publicar release
+      - name: Publicar release nueva
         env:
           GH_TOKEN: ${{ github.token }}
-          RELEASE_COMMIT: ${{ github.sha }}
+          RELEASE_TAG: ${{ steps.version.outputs.tag }}
+          RELEASE_NOTES: ${{ steps.version.outputs.notes }}
         run: |
-          gh release create v0.1.0 \
-            --target "$RELEASE_COMMIT" \
-            --title "Auditor Filosófico v0.1.0" \
-            --notes-file docs/releases/v0.1.0.md \
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            echo "La release $RELEASE_TAG ya existe; se conservan sus archivos publicados."
+            exit 0
+          fi
+          gh release create "$RELEASE_TAG" \
+            --target "$(git rev-parse HEAD)" \
+            --title "Auditor Filosófico $RELEASE_TAG" \
+            --notes-file "$RELEASE_NOTES" \
             .artifacts/*.zip .artifacts/*-SKILL.md .artifacts/SHA256SUMS
