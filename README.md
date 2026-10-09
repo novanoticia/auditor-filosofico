@@ -23,8 +23,8 @@ Puedes añadir «rápido», «profundo», un enfoque concreto o «desde LessWron
 | Codex | Plugin con marketplace y skill; invocación mediante `$auditor-filosofico` o selección explícita. |
 | Claude Code | Plugin con marketplace; comando `/auditor-filosofico:auditar`. |
 | ChatGPT y Claude en chat | Prompt portable, configuración de un asistente/proyecto o skill cuando la cuenta admita ese formato. |
-| Mistral Le Chat | Prompt específico autocontenido; instrucciones breves para proyecto o agente con archivo. |
-| Perplexity | Prompt específico autocontenido; instrucciones breves para espacio con archivo y tratamiento de citas. |
+| Mistral Le Chat | Skill autocontenida con YAML y ZIP de raíz; prompt e instrucciones para proyecto o agente. |
+| Perplexity | Skill autocontenida con YAML y ZIP de raíz; prompt e instrucciones para espacio con tratamiento de citas. |
 | Otras IAs | Prompt portable en una conversación o espacio que admita instrucciones. |
 
 Lee la [guía de instalación](docs/instalacion.md) y los [límites de compatibilidad](docs/compatibilidad.md). Para empezar sin instalación, copia el [prompt completo](prompts/auditor-filosofico.md) como configuración en un chat y después aporta el texto a examinar. Si tu espacio permite adjuntar configuración, combina ese archivo con las [instrucciones breves](prompts/instrucciones-breves.md).
@@ -32,6 +32,8 @@ Lee la [guía de instalación](docs/instalacion.md) y los [límites de compatibi
 Esta primera versión distribuye el método mediante instrucciones. La búsqueda, lectura de adjuntos e historial dependen de las herramientas del anfitrión. El JSX original queda como referencia para una posible interfaz futura.
 
 Para **Le Chat y Perplexity**, sigue la [guía de chats web](docs/chats-web.md). Puedes copiar el [prompt de Le Chat](prompts/auditor-filosofico-le-chat.md) o el [prompt de Perplexity](prompts/auditor-filosofico-perplexity.md) directamente en una conversación. No requieren claves de API; su comportamiento en cuentas usuarias está pendiente de evaluación.
+
+Si utilizas **Subir Skills**, sube el ZIP específico `auditor-filosofico-le-chat-skill.zip` o `auditor-filosofico-perplexity-skill.zip` generado en `.artifacts/`, o el Markdown correspondiente de [Le Chat](adapters/le-chat/SKILL.md) o [Perplexity](adapters/perplexity/SKILL.md). Ambos contienen el método completo y metadatos YAML. El ZIP de distribución `auditor-filosofico-chats-web.zip` se extrae; no sirve para ese importador.
 
 ## Método
 
@@ -51,10 +53,11 @@ Requiere Python 3.10 o posterior, sin dependencias adicionales:
 python3 scripts/build.py
 python3 scripts/build.py --check
 python3 scripts/validate.py
+python3 -m unittest discover -s tests
 python3 scripts/build.py --package
 ```
 
-El último comando crea `.artifacts/auditor-filosofico-skill.zip` y `.artifacts/auditor-filosofico-chats-web.zip`. Este segundo ZIP contiene los prompts de Le Chat y Perplexity, la guía de carga, los casos de evaluación y la licencia; se extrae para copiar sus archivos al chat. La generación mantiene las adaptaciones sincronizadas y autocontenidas. Los [casos de evaluación](evals/casos.json) sirven para comprobar el comportamiento en cada modelo; la validación de archivos no ejecuta esas auditorías ni garantiza sus resultados.
+El último comando crea cuatro ZIP en `.artifacts/`: la skill genérica, el paquete de distribución para chats web y dos skills importables para Le Chat y Perplexity con `SKILL.md` en la raíz. La generación mantiene las adaptaciones sincronizadas y autocontenidas. Los [casos de evaluación](evals/casos.json) sirven para comprobar el comportamiento en cada modelo; la validación de archivos no ejecuta esas auditorías ni garantiza sus resultados.
 
 La propuesta de alcance y los cambios respecto de los adjuntos están en [las decisiones de diseño](docs/diseno.md). Los [originales aportados](references/originales/README.md) conservan su contenido histórico. El proyecto se distribuye bajo la [licencia MIT](LICENSE).
 

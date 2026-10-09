@@ -8,11 +8,11 @@ Esta versión prepara dos formatos nativos, una vía portable y dos adaptaciones
 | Claude Code | `.claude-plugin/plugin.json`, marketplace y skill invocable | Estructura basada en la documentación oficial; sincronización y enlaces comprobados localmente. Instalación y auditorías en Claude Code pendientes. |
 | ChatGPT | Prompt completo o configuración con archivo | Archivo autocontenido generado; evaluación con el modelo y la cuenta usuaria pendiente. |
 | Claude en chat | Prompt completo; ZIP de skill si la cuenta permite importación | Prompt y ZIP generados; importación y evaluación en cuenta usuaria pendientes. |
-| Mistral Le Chat | Prompt completo específico; instrucciones breves con archivo en proyecto o agente | Generación y empaquetado comprobados localmente. Carga y auditorías en cuenta usuaria pendientes. |
-| Perplexity | Prompt completo específico; instrucciones breves con archivo en espacio | Generación y empaquetado comprobados localmente. Carga, recuperación íntegra del método y auditorías en cuenta usuaria pendientes. |
+| Mistral Le Chat | Skill Markdown con YAML y ZIP con `SKILL.md` en raíz; prompt e instrucciones de proyecto o agente | Estructura del importador y método íntegro comprobados localmente. Aceptación y auditorías en cuenta usuaria pendientes. |
+| Perplexity | Skill Markdown con YAML y ZIP con `SKILL.md` en raíz; prompt e instrucciones de espacio | Estructura del importador y método íntegro comprobados localmente. Aceptación y auditorías en cuenta usuaria pendientes. |
 | Otras IAs | Prompt completo en un contexto que admita instrucciones | Archivo generado; admisión y comportamiento por producto pendientes. |
 
-La [guía de chats web](chats-web.md) detalla las dos rutas. Los prompts contienen el método completo y reglas específicas sobre acceso a fuentes, citas y límites entre conversaciones. Las instrucciones breves requieren acceso al archivo completo. El ZIP para chats web se extrae; no es un plugin importable.
+La [guía de chats web](chats-web.md) detalla las rutas de importación y carga manual. Skills y prompts contienen el método completo y reglas específicas sobre acceso a fuentes, citas y límites entre conversaciones. Las instrucciones breves requieren acceso al archivo completo. El ZIP de distribución para chats web se extrae; los ZIP específicos de skill se suben directamente a los importadores que admitan ese formato.
 
 ## Capacidades del anfitrión
 

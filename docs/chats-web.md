@@ -1,6 +1,21 @@
 # Auditor Filosófico en Mistral Le Chat y Perplexity
 
-Estas adaptaciones se cargan como instrucciones en el chat web y utilizan su modelo. No requieren API, servidor ni Python para usarlas. Los manifiestos de Codex y Claude Code y el ZIP de skill no se instalan en estos chats.
+Estas adaptaciones se cargan como skills o instrucciones en el chat web y utilizan su modelo. No requieren API, servidor ni Python para usarlas. Los manifiestos de Codex y Claude Code pertenecen a sus respectivos clientes.
+
+## Subir Skills: ZIP o Markdown importable
+
+Si tu interfaz muestra **Subir Skills** y pide un ZIP con `SKILL.md` en el nivel raíz o un Markdown con nombre y descripción YAML, utiliza el archivo de tu plataforma:
+
+| Chat | ZIP para subir directamente | Markdown independiente alternativo |
+| --- | --- | --- |
+| Mistral Le Chat | `auditor-filosofico-le-chat-skill.zip` | [adapters/le-chat/SKILL.md](../adapters/le-chat/SKILL.md) |
+| Perplexity | `auditor-filosofico-perplexity-skill.zip` | [adapters/perplexity/SKILL.md](../adapters/perplexity/SKILL.md) |
+
+Genera los ZIP con `python3 scripts/build.py --package`; se guardan en `.artifacts/`. Sube **solo uno**, el correspondiente al chat. Cada ZIP contiene `SKILL.md` en la raíz y `LICENSE`. El Markdown tiene metadatos YAML `name` y `description` y todo el método incorporado, sin referencias externas necesarias.
+
+Después de importar, selecciona o habilita la skill según el cliente y escribe «Auditor Filosófico: analiza este texto: …». No necesitas adjuntar otro archivo ni pegar las instrucciones breves cuando utilizas esta skill autocontenida.
+
+El archivo `auditor-filosofico-chats-web.zip` es un paquete para extraer prompts y guías: **no lo subas al importador de skills**. No contiene un `SKILL.md` en la raíz y provoca el error «SKILL.md not found in skill artifact». El ZIP genérico de skill conserva una carpeta superior; para importadores que exigen raíz utiliza los dos ZIP específicos indicados arriba.
 
 ## Archivos preparados
 
@@ -49,4 +64,4 @@ Para revisar una respuesta anterior, asegúrate de que esté visible en ese hilo
 
 ## Estado de comprobación
 
-Se comprueban localmente generación, sincronización, archivos autocontenidos y empaquetado. No se han ejecutado auditorías ni probado la instalación en cuentas de Le Chat o Perplexity. La documentación de producto orienta la carga, pero no demuestra que un modelo cumpla el método. Registra los resultados manuales según la [guía de evaluación](../evals/README.md).
+Se comprueban localmente generación, sincronización, archivos autocontenidos y empaquetado, con pruebas de regresión para `SKILL.md` en la raíz, metadatos YAML y método íntegro. La captura aportada muestra que el importador rechazó el ZIP de distribución por ausencia de `SKILL.md`; los ZIP específicos corrigen esa estructura. Su aceptación en las cuentas y el comportamiento del auditor están pendientes de prueba. Registra los resultados manuales según la [guía de evaluación](../evals/README.md).

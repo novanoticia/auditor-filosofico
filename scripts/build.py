@@ -139,6 +139,11 @@ def render():
         outputs[f"prompts/{filename}"] = (
             outputs["prompts/auditor-filosofico.md"] + "\n---\n\n" + adapter + "\n"
         )
+        outputs[f"adapters/{platform}/SKILL.md"] = (
+            "---\nname: auditor-filosofico\ndescription: "
+            + yaml_string(description) + "\n---\n\n"
+            + outputs[f"prompts/{filename}"]
+        )
         outputs[f"prompts/instrucciones-breves-{platform}.md"] = (
             "El usuario configura al Auditor Filosófico con el archivo " + filename + ". "
             "Antes de auditar, consulta el método completo de ese archivo: núcleo, "
@@ -175,7 +180,7 @@ def package_web(outputs):
             f"prompts/{prefix}-{platform}.md"
             for platform in WEB_ADAPTERS
             for prefix in ("auditor-filosofico", "instrucciones-breves")
-        ]
+        ] + [f"adapters/{platform}/SKILL.md" for platform in WEB_ADAPTERS]
         for path in sorted(paths):
             content = outputs[path] if path in outputs else (ROOT / path).read_text(encoding="utf-8")
             entry = ZipInfo(path, date_time=(1980, 1, 1, 0, 0, 0))
@@ -183,6 +188,23 @@ def package_web(outputs):
             entry.external_attr = 0o100644 << 16
             archive.writestr(entry, content.encode("utf-8"))
     print(f"Paquete: {target.relative_to(ROOT)}")
+
+
+def package_web_skills(outputs):
+    directory = ROOT / ".artifacts"
+    directory.mkdir(parents=True, exist_ok=True)
+    for platform in WEB_ADAPTERS:
+        target = directory / f"auditor-filosofico-{platform}-skill.zip"
+        with ZipFile(target, "w", compression=ZIP_DEFLATED) as archive:
+            for name, content in {
+                "SKILL.md": outputs[f"adapters/{platform}/SKILL.md"],
+                "LICENSE": outputs["skills/auditor-filosofico/LICENSE"],
+            }.items():
+                entry = ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
+                entry.compress_type = ZIP_DEFLATED
+                entry.external_attr = 0o100644 << 16
+                archive.writestr(entry, content.encode("utf-8"))
+        print(f"Skill importable: {target.relative_to(ROOT)}")
 
 
 def main():
@@ -206,6 +228,7 @@ def main():
     if args.package:
         package_skill(outputs)
         package_web(outputs)
+        package_web_skills(outputs)
     print(f"{len(outputs)} archivos {'sincronizados' if args.check else 'generados'}.")
     return 0
 
