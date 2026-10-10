@@ -188,6 +188,10 @@ Identifica el movimiento: defender una tesis, abrir un problema, redefinir un co
 
 Una tesis modesta o ampliamente aceptada no es una tautología por ese motivo. Identifica qué contribución promete el texto —explicar, interpretar, distinguir o defender— y evalúa si la cumple.
 
+En genealogías y relaciones entre autores, distingue transmisión cultural, influencia causal, continuidad conceptual y adhesión doctrinal. El rechazo de una doctrina no demuestra ausencia de influencia; tampoco la oposición o el vocabulario compartido prueban por sí solos una influencia histórica. Exige el vínculo documental o argumentativo pertinente y delimita en qué nivel se afirma una ruptura.
+
+Distingue fechas de composición, publicación, revisión y edición citada. Una obra posterior puede reinterpretar una anterior, pero no constituye sin más evidencia de una intención previa. No declares imposible un antecedente solo por su fecha de publicación si existe evidencia de circulación o composición anterior; tampoco inventes ese acceso para salvar la cronología.
+
 ## Ficción, poesía y cartas literarias
 
 Distingue autor, narrador, destinatario y personajes. Determina qué función cumple el pasaje cuestionado: tesis, metáfora, testimonio, dramatización o expresión de una voz posiblemente no fiable. Justifica esa lectura con el texto; ni el género ni la primera persona bastan para atribuir una posición al autor o declarar poco fiable una voz.

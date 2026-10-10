@@ -350,5 +350,49 @@
       "No salva automáticamente el original mediante la versión atenuada",
       "Puede proponer una reformulación como cambio del texto, distinguiéndola de lo que este afirma"
     ]
+  },
+  {
+    "id": "ruptura-doctrinal-y-transmision-cultural",
+    "contexto": "Auditor seleccionado. Se conceden los hechos del ejemplo ficticio para evaluar únicamente su compatibilidad.",
+    "entrada": "Auditor Filosófico: evalúa: «Mara aprendió un método de lectura en la escuela de Nilo. Después rechazó su doctrina religiosa y empleó ese método para criticarla. Por tanto, no recibió ninguna influencia de esa escuela».",
+    "expectativas": [
+      "Distingue transmisión de un método y adhesión religiosa",
+      "Acepta la posibilidad de rechazo doctrinal con influencia cultural",
+      "Detecta que la negación de toda influencia excede los hechos concedidos",
+      "No convierte la transmisión del método en aceptación de la doctrina"
+    ]
+  },
+  {
+    "id": "oposicion-no-prueba-influencia",
+    "contexto": "Auditor seleccionado. Dos textos ficticios tienen tesis opuestas; se desconoce si sus autores tuvieron contacto o acceso mutuo.",
+    "entrada": "Auditor Filosófico: evalúa: «A defiende la tesis P y B defiende no-P. Esa oposición demuestra que B leyó a A y recibió su influencia».",
+    "expectativas": [
+      "Reconoce oposición lógica sin dar por probada una relación histórica",
+      "Identifica la falta de evidencia de acceso o transmisión",
+      "No infiere independencia absoluta de la falta de prueba",
+      "Indica qué documentación permitiría contrastar la influencia"
+    ]
+  },
+  {
+    "id": "composicion-anterior-publicacion-posterior",
+    "contexto": "Auditor seleccionado. Se conceden como hechos las fechas y el acceso documental, sin verificación externa.",
+    "entrada": "Auditor Filosófico: revisa este diagnóstico. Un manuscrito fue compuesto en 1900 y leído por Vera en 1901, pero se publicó en 1910. Vera publicó su libro en 1905. La auditoría dice: «El manuscrito no pudo influir en el libro de Vera porque se publicó cinco años después».",
+    "expectativas": [
+      "Distingue composición, circulación y publicación",
+      "Detecta que la fecha de publicación no excluye la influencia con el acceso anterior concedido",
+      "No convierte la posibilidad y el acceso en prueba suficiente de influencia efectiva",
+      "Mantiene las fechas aportadas sin inventar otra edición"
+    ]
+  },
+  {
+    "id": "autointerpretacion-tardia-no-prueba-intencion-inicial",
+    "contexto": "Auditor seleccionado. Solo se aporta una interpretación retrospectiva, sin borradores ni declaraciones contemporáneas de la obra inicial.",
+    "entrada": "Auditor Filosófico: evalúa: «En 1950 Elio dijo que su novela de 1920 anticipaba su teoría de 1940. Por tanto, al escribir la novela ya pretendía exponer esa teoría completa».",
+    "expectativas": [
+      "Distingue autointerpretación posterior e intención de composición",
+      "No trata el testimonio retrospectivo como prueba concluyente de la intención inicial",
+      "Admite que pueda ser evidencia pertinente con límites sin descartarlo automáticamente",
+      "Identifica documentación contemporánea como contraste útil sin inventarla"
+    ]
   }
 ]
