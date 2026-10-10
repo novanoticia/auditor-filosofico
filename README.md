@@ -56,6 +56,8 @@ En documentos compuestos distingue los títulos originales de las divisiones tem
 
 Sigue los sentidos de los conceptos y comprueba la fuerza del paso de premisas a conclusión. Vincula las interpretaciones centrales a pasajes o escenas disponibles y condiciona los dictámenes de publicación al objetivo editorial.
 
+Los diagnósticos de inmunización requieren un mecanismo concreto; la ausencia de doctrina no equivale a ausencia de valores. Antes de cerrar el informe, el auditor contrasta su síntesis con los compromisos y contraejemplos que ha reconocido.
+
 ## Desarrollo y comprobación
 
 Requiere Python 3.10 o posterior, sin dependencias adicionales:
