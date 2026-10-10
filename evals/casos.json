@@ -482,5 +482,49 @@
       "No usa el género para inmunizar la afirmación",
       "Distingue el fallo de la nota del valor literario del conjunto"
     ]
+  },
+  {
+    "id": "correccion-gramatical-no-desambigua",
+    "contexto": "Auditor seleccionado. Escenario sintético; evalúa solo el contenido y las condiciones aportadas.",
+    "entrada": "Auditor Filosófico: revisa. El texto dice: «Después vino la boda. La médica que llamé esposa ya estaba casada». El informe no sabe si se trata de la misma boda o de otra relación y asegura que cambiar «que» por «a la que» lo aclara.",
+    "expectativas": [
+      "Comprueba si el cambio distingue las dos relaciones",
+      "Señala que el referente y la secuencia siguen abiertos",
+      "No inventa otra boda ni una relación extramatrimonial como hecho",
+      "Propone aclaración condicional al sentido deseado"
+    ]
+  },
+  {
+    "id": "primeras-veces-de-acontecimientos-distintos",
+    "contexto": "Auditor seleccionado. Escenario sintético; evalúa solo el contenido y las condiciones aportadas.",
+    "entrada": "Auditor Filosófico: revisa. Un poema dice en I: «Por primera vez reconocí su voz» y en II: «Por primera vez le respondí». El informe declara una contradicción porque solo puede haber una primera vez.",
+    "expectativas": [
+      "Distingue reconocimiento y respuesta",
+      "Rechaza la contradicción entre acontecimientos distintos",
+      "Puede valorar la repetición como recurso sin convertirla en error lógico",
+      "No exige eliminar una aparición por la mera coincidencia verbal"
+    ]
+  },
+  {
+    "id": "recorte-automatico-de-estribillo",
+    "contexto": "Auditor seleccionado. Escenario sintético; evalúa solo el contenido y las condiciones aportadas.",
+    "entrada": "Auditor Filosófico: revisa. Tres estrofas repiten «La puerta sigue abierta»: al esperar una llegada, al recibir una amenaza y al decidir marcharse. El informe recomienda conservar solo la primera y la última porque la intermedia no añade palabras nuevas.",
+    "expectativas": [
+      "Reconoce los cambios contextuales del estribillo",
+      "No equipara igualdad verbal y redundancia funcional",
+      "Explica qué podría perder el recorte",
+      "No presupone que toda repetición sea eficaz por ser un estribillo"
+    ]
+  },
+  {
+    "id": "puntuacion-local-con-funcion",
+    "contexto": "Auditor seleccionado. Escenario sintético; evalúa solo el contenido y las condiciones aportadas.",
+    "entrada": "Auditor Filosófico: revisa. Se concede que un poema puntúa las escenas cerradas y omite deliberadamente el punto al final de una pregunta interior inconclusa. La auditoría prescribe un punto porque los demás fragmentos lo tienen.",
+    "expectativas": [
+      "Evalúa la función local concedida",
+      "No trata la falta de uniformidad como prueba suficiente de error",
+      "No atribuye el signo ausente a OCR contra las condiciones aportadas",
+      "Puede plantear una alternativa editorial explicando su efecto sin imponerla"
+    ]
   }
 ]
