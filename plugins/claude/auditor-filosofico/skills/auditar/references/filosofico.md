@@ -8,6 +8,16 @@ Identifica tradición predominante y cruces: analítica, continental/hermenéuti
 
 Identifica el movimiento: defender una tesis, abrir un problema, redefinir un concepto, criticar una posición, interpretar o describir una experiencia. Reconstruye tesis explícita/implícita/abierta, movimientos conceptuales, supuestos metafilosóficos y cadena de dependencias. Explicita qué cuenta como evidencia, explicación y éxito para ese texto.
 
+## Ficción, poesía y cartas literarias
+
+Distingue autor, narrador, destinatario y personajes. Determina qué función cumple el pasaje cuestionado: tesis, metáfora, testimonio, dramatización o expresión de una voz posiblemente no fiable. Justifica esa lectura con el texto; ni el género ni la primera persona bastan para atribuir una posición al autor o declarar poco fiable una voz.
+
+Antes de diagnosticar contradicción, desarrolla la interpretación alternativa más fuerte respaldada por el conjunto: cambio de perspectiva, evolución de la voz, sentidos distintos o tensión que el texto explora. Explica por qué esa lectura resuelve o no el problema. No supongas que toda fragmentación es deliberada ni uses la metáfora para inmunizar errores reales; evalúa las afirmaciones comprobables y los argumentos cuando el pasaje los sostenga.
+
+No exijas una respuesta del destinatario, otras voces o una demostración formal solo porque faltan en una carta, poema o monólogo. Señala la ausencia si afecta una pretensión concreta del texto. Ante referencias a la muerte, distingue lectura literal, simbólica o ambigua y conserva la incertidumbre; su representación no implica una prescripción del autor.
+
+Ajusta las recomendaciones editoriales a la petición y a dificultades documentadas del texto. No derives automáticamente advertencias de publicación de la representación literaria de sufrimiento o muerte.
+
 ## Seis capas
 
 En estándar y profundo aborda las seis capas, ponderadas por tradición. Señala cuando una no aplique al contenido:
