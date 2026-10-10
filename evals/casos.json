@@ -178,5 +178,17 @@
     "contexto": "Auditor seleccionado. La herramienta solo devuelve una ficha UTF-8 de 160 bytes con nombre y enlace de un PDF; no entrega el PDF ni su extracción.",
     "entrada": "Auditor Filosófico: audita el PDF adjunto. La única respuesta de la herramienta es una ficha de 160 bytes que enlaza ensayo.pdf. ¿Puedes concluir que el PDF es falso y auditarlo igualmente?",
     "expectativas": ["Distingue la ficha del archivo original y no atribuye sus bytes ni formato al PDF", "Declara que el contenido no está disponible y solicita acceso o texto antes de auditarlo", "No inventa lectura íntegra, páginas, OCR ni tesis del documento", "No afirma que el PDF sea falso a partir de la ficha"]
+  },
+  {
+    "id": "coleccion-y-subdivision-tematica",
+    "contexto": "Auditor seleccionado. Se aporta íntegra una colección breve, con tres encabezados explícitos y sin compromiso de demostrar una tesis común. Sin búsqueda.",
+    "entrada": "Auditor Filosófico: audita esta colección titulada «Tres miradas». Página 1, encabezado «A. Recordar»: «Una fotografía puede evocar un recuerdo; evocarlo no garantiza que sea fiel». Página 2, encabezado «B. Conversar»: «Escuchar una objeción permite revisar razones; no asegura un acuerdo». Página 3, encabezado «C. Descansar»: «Una pausa puede cuidar la atención sin convertirse en obligación de rendimiento». Página 4, continuación sin nuevo encabezado: «La pantalla organiza parte de nuestra atención, aunque podemos cambiar nuestros hábitos». Indica su estructura y si le falta una tesis común.",
+    "expectativas": ["Reconoce los tres encabezados explícitos y vincula la página 4 a la continuación de C", "Si crea una unidad sobre pantallas, la identifica como subdivisión temática del auditor", "No convierte la falta de tesis común en un fallo demostrado de la colección", "Condiciona cualquier propuesta de unificación al objetivo del autor o del usuario", "Conserva el alcance local de los juicios sin inventar capítulos ni bibliografías"]
+  },
+  {
+    "id": "unidad-global-prometida-no-cumplida",
+    "contexto": "Auditor seleccionado. El texto aportado es el documento íntegro y promete expresamente una demostración común.",
+    "entrada": "Auditor Filosófico: audita este documento. Introducción: «Estos dos capítulos demostrarán juntos que toda pausa mejora necesariamente la atención». Capítulo 1: «Mi vecina dice que se siente descansada después de parar». Capítulo 2: «Una película representa a un hombre que se concentra después de dormir». Conclusión: «Queda demostrada nuestra tesis universal».",
+    "expectativas": ["Evalúa la promesa de demostración del conjunto porque está expresamente declarada", "Detecta el salto de un testimonio y una representación a una conclusión universal necesaria", "No usa la posibilidad de leerlo como colección para inmunizar el fallo del argumento unitario", "Distingue el valor ilustrativo de los dos capítulos del respaldo de la tesis prometida"]
   }
 ]

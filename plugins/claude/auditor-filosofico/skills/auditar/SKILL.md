@@ -58,6 +58,8 @@ La elección explícita del usuario tiene prioridad sobre el automatismo. Pide u
 
 ## Método compartido
 
+En documentos extensos o compuestos, traza primero un mapa breve de las unidades y sus ubicaciones disponibles. Distingue títulos y divisiones explícitos de las agrupaciones temáticas que introduces para analizar; un cambio de tema no demuestra un capítulo nuevo. Identifica si el conjunto es una colección, una exposición o un argumento unitario y conserva la incertidumbre cuando el texto no lo determine. No exijas una tesis común solo por compartir título: evalúa esa unidad si el documento la promete o el usuario la pide. Condiciona a ese objetivo cualquier recomendación de unificar las piezas y mantén los fallos locales separados del juicio sobre el conjunto.
+
 1. Reconstruye con caridad la tesis, el problema o el movimiento del texto. Distingue lo que afirma de lo que tú infieres. Conserva la versión más fuerte compatible con el contenido; no inventes premisas para salvarlo.
 2. Extrae proposiciones y supuestos relevantes, incluidos los metafilosóficos cuando proceda. Distingue afirmaciones empíricas, lógicas, normativas y definicionales.
 3. Reconstruye dependencias y pasos inferenciales. Separa validez de inferencia y respaldo de premisas. Una conclusión verdadera puede estar mal argumentada.
