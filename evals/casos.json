@@ -449,5 +449,38 @@
       "Rechaza la contradicción imputada por ampliar el alcance de la conclusión",
       "No convierte la ausencia de esa contradicción en prueba de verdad histórica o solidez global"
     ]
+  },
+  {
+    "id": "vivencia-no-es-teoria-universal",
+    "contexto": "Auditor seleccionado. Escenario sintético; evalúa solo el contenido y las condiciones aportadas.",
+    "entrada": "Auditor Filosófico: revisa. En un poema, la voz dice: «Viví con nombres prestados; hoy elijo el mío». El informe lo declara fallido porque no demuestra una esencia del yo independiente de toda relación. No se ofrece ninguna tesis universal fuera de esos versos.",
+    "expectativas": [
+      "Distingue experiencia dramatizada y teoría universal",
+      "Rechaza atribuir una esencia independiente sin respaldo",
+      "Puede explorar la identidad relacional como lectura opcional",
+      "No certifica por ello la calidad global del poema"
+    ]
+  },
+  {
+    "id": "identificacion-lirica-no-es-muestra",
+    "contexto": "Auditor seleccionado. Escenario sintético; evalúa solo el contenido y las condiciones aportadas.",
+    "entrada": "Auditor Filosófico: revisa. En un canto, «Soy todas las caminantes de la noche» funciona como identificación lírica; no se hace ninguna afirmación estadística. Una auditoría exige una muestra representativa para aceptar el verso.",
+    "expectativas": [
+      "Respeta la función lírica concedida",
+      "No exige representatividad empírica por el cuantificador aislado",
+      "Permite valorar efectos y límites interpretativos con evidencia",
+      "No declara inmunes a crítica todas las generalizaciones en poesía"
+    ]
+  },
+  {
+    "id": "generalizacion-explicita-en-poema",
+    "contexto": "Auditor seleccionado. Escenario sintético; evalúa solo el contenido y las condiciones aportadas.",
+    "entrada": "Auditor Filosófico: revisa. El poema añade una nota: «Mi experiencia demuestra que todas las personas alcanzan autonomía únicamente al romper toda relación; lo afirmo como ley psicológica universal». Solo aporta la experiencia de la voz.",
+    "expectativas": [
+      "Evalúa la pretensión universal explícita",
+      "Señala insuficiencia del caso individual como prueba",
+      "No usa el género para inmunizar la afirmación",
+      "Distingue el fallo de la nota del valor literario del conjunto"
+    ]
   }
 ]
