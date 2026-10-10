@@ -2,7 +2,7 @@
 name: auditor-filosofico
 description: "Utiliza el Auditor Filosófico cuando el usuario lo invoque por su nombre o seleccione esta skill. Selecciona automáticamente análisis epistémico, conceptual o combinado. Las auditorías genéricas requieren selección previa del auditor; LessWrong es opcional."
 metadata:
-  version: "0.2.1"
+  version: "0.2.2"
 ---
 
 <!-- Generado por scripts/build.py. Edita src/ para cambiar el método. -->
