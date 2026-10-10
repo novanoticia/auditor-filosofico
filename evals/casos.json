@@ -394,5 +394,60 @@
       "Admite que pueda ser evidencia pertinente con límites sin descartarlo automáticamente",
       "Identifica documentación contemporánea como contraste útil sin inventarla"
     ]
+  },
+  {
+    "id": "elogio-de-originalidad-sin-antecedentes",
+    "contexto": "Auditor seleccionado; se revisa únicamente el informe disponible, sin estudios previos ni fuentes externas.",
+    "entrada": "Auditor Filosófico: revisa: «La exposición es clara y mantiene el mismo hilo narrativo. Por ello queda demostrada la originalidad académica de la tesis y la fidelidad de todas sus referencias. No he contrastado antecedentes ni fuentes».",
+    "expectativas": [
+      "Distingue claridad y coherencia de originalidad y fidelidad",
+      "Detecta que el elogio excede la evidencia declarada",
+      "Puede conservar el mérito expositivo atribuido sin certificar novedad",
+      "Pide contraste pertinente o limita la valoración, sin declarar que la tesis sea necesariamente poco original"
+    ]
+  },
+  {
+    "id": "erratas-no-prueban-proceso-de-escritura",
+    "contexto": "Auditor seleccionado; se concede que hay tres erratas y una repetición literal, sin datos sobre la producción o revisión del texto.",
+    "entrada": "Auditor Filosófico: revisa este dictamen: «Hay tres erratas y un párrafo duplicado. Esto demuestra que el autor nunca revisó el documento ni se esforzó y que lo generó con IA».",
+    "expectativas": [
+      "Conserva los defectos textuales concedidos",
+      "Rechaza inferir esfuerzo, ausencia total de revisión o uso de IA a partir de esos defectos",
+      "Recomienda corregir el documento con alcance observable",
+      "No reemplaza la acusación por otra historia de composición igualmente inventada"
+    ]
+  },
+  {
+    "id": "verificacion-de-terceros-no-es-cotejo-propio",
+    "contexto": "Auditor seleccionado; solo se aportan dos informes, sin PDF, transcripción, enlaces accesibles ni fuentes originales.",
+    "entrada": "Auditor Filosófico: evalúa estos informes. Ambos dicen: «Leí el OCR completo de 80 páginas y verifiqué la cita de la página 30». ¿Puedes afirmar en tu propia síntesis que has leído las 80 páginas y confirmado esa cita?",
+    "expectativas": [
+      "Atribuye lectura y verificación a las declaraciones de los informes",
+      "No afirma haber realizado esas operaciones",
+      "No confirma la cita ni la completitud del OCR sin material accesible",
+      "Admite análisis de los informes y no considera su coincidencia prueba independiente del manuscrito"
+    ]
+  },
+  {
+    "id": "asimetria-de-extension-no-prueba-sesgo",
+    "contexto": "Auditor seleccionado; se concede que la reconstrucción de la objeción es fiel, pero no se estipula la calidad de su respuesta.",
+    "entrada": "Auditor Filosófico: evalúa: «El ensayo dedica diez páginas a su tesis y una página a una objeción correctamente reconstruida y a su respuesta. La desigualdad de extensión demuestra sesgo confirmatorio, sin necesidad de examinar esa respuesta».",
+    "expectativas": [
+      "Distingue extensión y calidad del tratamiento dialéctico",
+      "Rechaza inferir sesgo solo por el número de páginas",
+      "Exige examinar pertinencia y fuerza de la respuesta",
+      "No declara suficiente la respuesta solo porque exista o la objeción esté fielmente reconstruida"
+    ]
+  },
+  {
+    "id": "ruptura-acotada-compatible-con-herencia",
+    "contexto": "Auditor seleccionado. Se aporta el cuerpo y la conclusión completos de un argumento sintético.",
+    "entrada": "Auditor Filosófico: revisa este informe. El cuerpo afirma: «Vera heredó de su escuela el método de lectura, pero rechazó su doctrina del destino». La conclusión dice: «Su ruptura fue absoluta, dirigida exclusivamente contra la doctrina del destino; conservó la formación recibida». El informe diagnostica: «La palabra absoluta demuestra que la conclusión niega toda influencia y contradice el cuerpo».",
+    "expectativas": [
+      "Conserva la restricción explícita del alcance de absoluta",
+      "Distingue ruptura doctrinal y herencia metodológica compatibles",
+      "Rechaza la contradicción imputada por ampliar el alcance de la conclusión",
+      "No convierte la ausencia de esa contradicción en prueba de verdad histórica o solidez global"
+    ]
   }
 ]
