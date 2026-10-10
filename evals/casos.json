@@ -190,5 +190,23 @@
     "contexto": "Auditor seleccionado. El texto aportado es el documento íntegro y promete expresamente una demostración común.",
     "entrada": "Auditor Filosófico: audita este documento. Introducción: «Estos dos capítulos demostrarán juntos que toda pausa mejora necesariamente la atención». Capítulo 1: «Mi vecina dice que se siente descansada después de parar». Capítulo 2: «Una película representa a un hombre que se concentra después de dormir». Conclusión: «Queda demostrada nuestra tesis universal».",
     "expectativas": ["Evalúa la promesa de demostración del conjunto porque está expresamente declarada", "Detecta el salto de un testimonio y una representación a una conclusión universal necesaria", "No usa la posibilidad de leerlo como colección para inmunizar el fallo del argumento unitario", "Distingue el valor ilustrativo de los dos capítulos del respaldo de la tesis prometida"]
+  },
+  {
+    "id": "salvedad-con-contenido-interpretativo",
+    "contexto": "Auditor seleccionado. Ensayo de interpretación artística, sin pretensión de establecer leyes causales ni medir efectos arquitectónicos.",
+    "entrada": "Auditor Filosófico: evalúa si este pasaje se inmuniza o pierde su tesis por matizar. «En esta película, la casa representa un archivo de recuerdos: el montaje relaciona las habitaciones con episodios del pasado familiar. No afirmo que toda casa produzca memoria ni que sus paredes tengan agencia».",
+    "expectativas": ["Reconstruye la tesis interpretativa positiva que permanece después de la salvedad", "Distingue representación cinematográfica de causalidad arquitectónica universal", "No declara inmunización, retirada de tesis o fallo solo por limitar el alcance empírico", "Identifica qué evidencia de la película podría sostener o debilitar la interpretación sin exigir un experimento causal"]
+  },
+  {
+    "id": "salvedad-que-contradice-la-tesis",
+    "contexto": "Auditor seleccionado. Ambos enunciados hablan de los mismos edificios y personas, en el mismo sentido causal; no hay cambio de método ni de alcance.",
+    "entrada": "Auditor Filosófico: audita estos dos enunciados del mismo argumento. Párrafo 1: «Todo edificio determina causalmente la identidad de cada persona que lo habita». Párrafo 2: «Ningún edificio ejerce influencia causal alguna sobre la identidad de quienes lo habitan». El autor presenta el segundo como una simple salvedad del primero.",
+    "expectativas": ["Detecta la incompatibilidad causal de las dos proposiciones bajo el alcance indicado", "No trata la negación de toda influencia como una mera limitación compatible", "Cita ambos enunciados y explica por qué el matiz contradice la tesis", "Conserva un diagnóstico firme sin atribuir intenciones al autor"]
+  },
+  {
+    "id": "objecion-mencionada-no-ausente",
+    "contexto": "Auditor seleccionado. Se aportan todos los párrafos del ensayo; la objeción es expresamente hipotética.",
+    "entrada": "Auditor Filosófico: revisa esta auditoría contra el ensayo completo. Párrafo 1: «Traducir una experiencia a palabras compartidas puede facilitar el diálogo». Párrafo 2: «Una objeción hipotética es que la traducción excluya experiencias difíciles de expresar; no necesito atribuirla a una persona concreta». Párrafo 3: «Esa dificultad limita mi propuesta, aunque no elimina la utilidad de intentar dialogar». La auditoría afirma: «No hay objeciones; falta identificar al crítico real que reclama espacio para lo intraducible».",
+    "expectativas": ["Reconoce la objeción expresamente formulada en el párrafo 2 y la respuesta tentativa del párrafo 3", "Distingue presencia de una objeción de suficiencia de su desarrollo o respuesta", "No exige una persona real para una objeción hipotética declarada", "Corrige el diagnóstico de ausencia y puede evaluar la respuesta por sus razones"]
   }
 ]

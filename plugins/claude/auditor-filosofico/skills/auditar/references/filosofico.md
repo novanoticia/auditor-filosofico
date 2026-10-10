@@ -8,6 +8,8 @@ Identifica tradición predominante y cruces: analítica, continental/hermenéuti
 
 Identifica el movimiento: defender una tesis, abrir un problema, redefinir un concepto, criticar una posición, interpretar o describir una experiencia. Reconstruye tesis explícita/implícita/abierta, movimientos conceptuales, supuestos metafilosóficos y cadena de dependencias. Explicita qué cuenta como evidencia, explicación y éxito para ese texto.
 
+Una tesis modesta o ampliamente aceptada no es una tautología por ese motivo. Identifica qué contribución promete el texto —explicar, interpretar, distinguir o defender— y evalúa si la cumple.
+
 ## Ficción, poesía y cartas literarias
 
 Distingue autor, narrador, destinatario y personajes. Determina qué función cumple el pasaje cuestionado: tesis, metáfora, testimonio, dramatización o expresión de una voz posiblemente no fiable. Justifica esa lectura con el texto; ni el género ni la primera persona bastan para atribuir una posición al autor o declarar poco fiable una voz.
@@ -49,6 +51,8 @@ En estándar y profundo aborda las seis capas, ponderadas por tradición. Señal
 
 No equipares falta de conclusión, formalización o falsabilidad empírica con fracaso. El juicio no es una medición porcentual de la verdad filosófica.
 
+Antes de diagnosticar exceso de salvedades o inmunización, reconstruye la afirmación que permanece y comprueba si el matiz delimita su alcance, la contradice o la deja sin contenido. Una reiteración que dificulta la lectura puede ser un problema editorial sin constituir un fallo lógico; justifica por separado ambos efectos cuando existan.
+
 ## Diecinueve entradas del catálogo filosófico
 
 Proceden del prompt filosófico aportado al proyecto. Cada aplicación requiere contexto, explicación del fallo y cautela acerca de intención. Una elección deliberada puede ser legítima; el nombre de una entrada no demuestra un error.
@@ -85,6 +89,8 @@ Proceden del prompt filosófico aportado al proyecto. Cada aplicación requiere 
 19. Reificación filosófica.
 
 ## Omisiones y preguntas
+
+Antes de declarar ausente un marco, ejemplo o argumento, comprueba la unidad textual disponible: puede aparecer después o desarrollarse con otras palabras. Para objeciones, distingue si están ausentes, mencionadas, desarrolladas o respondidas, y evalúa la fuerza de la respuesta. Una objeción hipotética presentada como tal no exige un crítico real; si se atribuye a una persona o escuela, exige una reconstrucción fiel de su posición.
 
 Identifica contraargumentos serios, tradiciones que aporten una objeción útil, evidencia empírica pertinente y distinciones ausentes. No exijas evidencia empírica donde el objetivo sea legítimamente conceptual o descriptivo de experiencia.
 
