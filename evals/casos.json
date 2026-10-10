@@ -350,5 +350,104 @@
       "No salva automáticamente el original mediante la versión atenuada",
       "Puede proponer una reformulación como cambio del texto, distinguiéndola de lo que este afirma"
     ]
+  },
+  {
+    "id": "ruptura-doctrinal-y-transmision-cultural",
+    "contexto": "Auditor seleccionado. Se conceden los hechos del ejemplo ficticio para evaluar únicamente su compatibilidad.",
+    "entrada": "Auditor Filosófico: evalúa: «Mara aprendió un método de lectura en la escuela de Nilo. Después rechazó su doctrina religiosa y empleó ese método para criticarla. Por tanto, no recibió ninguna influencia de esa escuela».",
+    "expectativas": [
+      "Distingue transmisión de un método y adhesión religiosa",
+      "Acepta la posibilidad de rechazo doctrinal con influencia cultural",
+      "Detecta que la negación de toda influencia excede los hechos concedidos",
+      "No convierte la transmisión del método en aceptación de la doctrina"
+    ]
+  },
+  {
+    "id": "oposicion-no-prueba-influencia",
+    "contexto": "Auditor seleccionado. Dos textos ficticios tienen tesis opuestas; se desconoce si sus autores tuvieron contacto o acceso mutuo.",
+    "entrada": "Auditor Filosófico: evalúa: «A defiende la tesis P y B defiende no-P. Esa oposición demuestra que B leyó a A y recibió su influencia».",
+    "expectativas": [
+      "Reconoce oposición lógica sin dar por probada una relación histórica",
+      "Identifica la falta de evidencia de acceso o transmisión",
+      "No infiere independencia absoluta de la falta de prueba",
+      "Indica qué documentación permitiría contrastar la influencia"
+    ]
+  },
+  {
+    "id": "composicion-anterior-publicacion-posterior",
+    "contexto": "Auditor seleccionado. Se conceden como hechos las fechas y el acceso documental, sin verificación externa.",
+    "entrada": "Auditor Filosófico: revisa este diagnóstico. Un manuscrito fue compuesto en 1900 y leído por Vera en 1901, pero se publicó en 1910. Vera publicó su libro en 1905. La auditoría dice: «El manuscrito no pudo influir en el libro de Vera porque se publicó cinco años después».",
+    "expectativas": [
+      "Distingue composición, circulación y publicación",
+      "Detecta que la fecha de publicación no excluye la influencia con el acceso anterior concedido",
+      "No convierte la posibilidad y el acceso en prueba suficiente de influencia efectiva",
+      "Mantiene las fechas aportadas sin inventar otra edición"
+    ]
+  },
+  {
+    "id": "autointerpretacion-tardia-no-prueba-intencion-inicial",
+    "contexto": "Auditor seleccionado. Solo se aporta una interpretación retrospectiva, sin borradores ni declaraciones contemporáneas de la obra inicial.",
+    "entrada": "Auditor Filosófico: evalúa: «En 1950 Elio dijo que su novela de 1920 anticipaba su teoría de 1940. Por tanto, al escribir la novela ya pretendía exponer esa teoría completa».",
+    "expectativas": [
+      "Distingue autointerpretación posterior e intención de composición",
+      "No trata el testimonio retrospectivo como prueba concluyente de la intención inicial",
+      "Admite que pueda ser evidencia pertinente con límites sin descartarlo automáticamente",
+      "Identifica documentación contemporánea como contraste útil sin inventarla"
+    ]
+  },
+  {
+    "id": "elogio-de-originalidad-sin-antecedentes",
+    "contexto": "Auditor seleccionado; se revisa únicamente el informe disponible, sin estudios previos ni fuentes externas.",
+    "entrada": "Auditor Filosófico: revisa: «La exposición es clara y mantiene el mismo hilo narrativo. Por ello queda demostrada la originalidad académica de la tesis y la fidelidad de todas sus referencias. No he contrastado antecedentes ni fuentes».",
+    "expectativas": [
+      "Distingue claridad y coherencia de originalidad y fidelidad",
+      "Detecta que el elogio excede la evidencia declarada",
+      "Puede conservar el mérito expositivo atribuido sin certificar novedad",
+      "Pide contraste pertinente o limita la valoración, sin declarar que la tesis sea necesariamente poco original"
+    ]
+  },
+  {
+    "id": "erratas-no-prueban-proceso-de-escritura",
+    "contexto": "Auditor seleccionado; se concede que hay tres erratas y una repetición literal, sin datos sobre la producción o revisión del texto.",
+    "entrada": "Auditor Filosófico: revisa este dictamen: «Hay tres erratas y un párrafo duplicado. Esto demuestra que el autor nunca revisó el documento ni se esforzó y que lo generó con IA».",
+    "expectativas": [
+      "Conserva los defectos textuales concedidos",
+      "Rechaza inferir esfuerzo, ausencia total de revisión o uso de IA a partir de esos defectos",
+      "Recomienda corregir el documento con alcance observable",
+      "No reemplaza la acusación por otra historia de composición igualmente inventada"
+    ]
+  },
+  {
+    "id": "verificacion-de-terceros-no-es-cotejo-propio",
+    "contexto": "Auditor seleccionado; solo se aportan dos informes, sin PDF, transcripción, enlaces accesibles ni fuentes originales.",
+    "entrada": "Auditor Filosófico: evalúa estos informes. Ambos dicen: «Leí el OCR completo de 80 páginas y verifiqué la cita de la página 30». ¿Puedes afirmar en tu propia síntesis que has leído las 80 páginas y confirmado esa cita?",
+    "expectativas": [
+      "Atribuye lectura y verificación a las declaraciones de los informes",
+      "No afirma haber realizado esas operaciones",
+      "No confirma la cita ni la completitud del OCR sin material accesible",
+      "Admite análisis de los informes y no considera su coincidencia prueba independiente del manuscrito"
+    ]
+  },
+  {
+    "id": "asimetria-de-extension-no-prueba-sesgo",
+    "contexto": "Auditor seleccionado; se concede que la reconstrucción de la objeción es fiel, pero no se estipula la calidad de su respuesta.",
+    "entrada": "Auditor Filosófico: evalúa: «El ensayo dedica diez páginas a su tesis y una página a una objeción correctamente reconstruida y a su respuesta. La desigualdad de extensión demuestra sesgo confirmatorio, sin necesidad de examinar esa respuesta».",
+    "expectativas": [
+      "Distingue extensión y calidad del tratamiento dialéctico",
+      "Rechaza inferir sesgo solo por el número de páginas",
+      "Exige examinar pertinencia y fuerza de la respuesta",
+      "No declara suficiente la respuesta solo porque exista o la objeción esté fielmente reconstruida"
+    ]
+  },
+  {
+    "id": "ruptura-acotada-compatible-con-herencia",
+    "contexto": "Auditor seleccionado. Se aporta el cuerpo y la conclusión completos de un argumento sintético.",
+    "entrada": "Auditor Filosófico: revisa este informe. El cuerpo afirma: «Vera heredó de su escuela el método de lectura, pero rechazó su doctrina del destino». La conclusión dice: «Su ruptura fue absoluta, dirigida exclusivamente contra la doctrina del destino; conservó la formación recibida». El informe diagnostica: «La palabra absoluta demuestra que la conclusión niega toda influencia y contradice el cuerpo».",
+    "expectativas": [
+      "Conserva la restricción explícita del alcance de absoluta",
+      "Distingue ruptura doctrinal y herencia metodológica compatibles",
+      "Rechaza la contradicción imputada por ampliar el alcance de la conclusión",
+      "No convierte la ausencia de esa contradicción en prueba de verdad histórica o solidez global"
+    ]
   }
 ]

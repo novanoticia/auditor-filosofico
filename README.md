@@ -58,6 +58,8 @@ Sigue los sentidos de los conceptos y comprueba la fuerza del paso de premisas a
 
 Los diagnósticos de inmunización requieren un mecanismo concreto; la ausencia de doctrina no equivale a ausencia de valores. Antes de cerrar el informe, el auditor contrasta su síntesis con los compromisos y contraejemplos que ha reconocido.
 
+En historia de las ideas distingue influencia, adhesión y ruptura, así como composición, publicación y lectura retrospectiva. Aplica evidencia tanto a elogios como a críticas y conserva la atribución de las verificaciones declaradas por otras auditorías.
+
 ## Desarrollo y comprobación
 
 Requiere Python 3.10 o posterior, sin dependencias adicionales:

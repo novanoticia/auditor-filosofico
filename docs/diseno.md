@@ -45,6 +45,8 @@ El módulo epistémico trabaja principalmente sobre respaldo de afirmaciones y d
 19. Las interpretaciones centrales se anclan en pasajes o escenas disponibles; los hechos narrativos se distinguen de su valoración. Los dictámenes de publicación dependen de finalidad, público y criterios editoriales, sin imponer requisitos académicos a todo ensayo.
 20. Los diagnósticos de inmunización requieren una objeción bloqueada y un mecanismo concreto. Se distinguen compromisos positivos, desarrollo insuficiente y justificación pendiente, así como cuidado, criterio, regla y doctrina.
 21. Una contradicción que dependa de relacionar constitución, conocimiento, intención o acción exige justificar ese enlace. La revisión final contrasta la síntesis con la evidencia del propio informe y conserva la fuerza de las oposiciones del original.
+22. Las genealogías distinguen transmisión, influencia, continuidad y adhesión. Las cronologías separan composición, circulación, publicación, revisión y edición, sin convertir una lectura retrospectiva en intención inicial demostrada.
+23. Elogios y censuras requieren respaldo: claridad no acredita originalidad, extensión desigual no prueba sesgo y erratas no revelan esfuerzo ni herramientas de escritura. Las verificaciones declaradas por otros informes conservan su atribución hasta cotejarlas.
 
 ## Desarrollo posterior
 

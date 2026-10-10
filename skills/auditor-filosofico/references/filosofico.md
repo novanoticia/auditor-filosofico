@@ -10,6 +10,10 @@ Identifica el movimiento: defender una tesis, abrir un problema, redefinir un co
 
 Una tesis modesta o ampliamente aceptada no es una tautología por ese motivo. Identifica qué contribución promete el texto —explicar, interpretar, distinguir o defender— y evalúa si la cumple.
 
+En genealogías y relaciones entre autores, distingue transmisión cultural, influencia causal, continuidad conceptual y adhesión doctrinal. El rechazo de una doctrina no demuestra ausencia de influencia; tampoco la oposición o el vocabulario compartido prueban por sí solos una influencia histórica. Exige el vínculo documental o argumentativo pertinente y delimita en qué nivel se afirma una ruptura.
+
+Distingue fechas de composición, publicación, revisión y edición citada. Una obra posterior puede reinterpretar una anterior, pero no constituye sin más evidencia de una intención previa. No declares imposible un antecedente solo por su fecha de publicación si existe evidencia de circulación o composición anterior; tampoco inventes ese acceso para salvar la cronología.
+
 ## Ficción, poesía y cartas literarias
 
 Distingue autor, narrador, destinatario y personajes. Determina qué función cumple el pasaje cuestionado: tesis, metáfora, testimonio, dramatización o expresión de una voz posiblemente no fiable. Justifica esa lectura con el texto; ni el género ni la primera persona bastan para atribuir una posición al autor o declarar poco fiable una voz.
@@ -26,7 +30,7 @@ En estándar y profundo aborda las seis capas, ponderadas por tradición. Señal
 
 1. **Conceptual:** consistencia de términos, equivocidad ordinaria/técnica y definiciones estipulativas frente a pretensiones de descubrimiento. Sigue los sentidos y criterios de éxito de los términos centrales entre premisas y conclusión. Distingue un cambio injustificado de criterio de un contraste explícito entre concepciones; este último no constituye por sí solo equivocidad.
 2. **Inferencial:** validez o legitimidad de pasos, premisas ocultas e intuiciones que soportan el razonamiento. Reconoce movimientos legítimos propios del método usado.
-3. **Dialéctica:** respuesta a objeciones fuertes, reconstrucción caritativa de rivales y mejor contraargumento omitido.
+3. **Dialéctica:** respuesta a objeciones fuertes, reconstrucción caritativa de rivales y mejor contraargumento omitido. Valora fidelidad y fuerza de las respuestas, no igualdad de páginas: dedicar menos espacio al rival no demuestra por sí solo sesgo confirmatorio, ni una exposición extensa garantiza refutación.
 4. **Hermenéutica:** fidelidad interpretativa, contexto, lecturas selectivas y distinción entre lo dicho por un autor y la lectura propuesta. Vincula cada interpretación central a un pasaje o escena disponible y al rasgo que la sostiene. Comprueba los personajes, desenlaces o citas usados como premisas contra la obra accesible, distinguiendo hechos de la obra y valoración interpretativa. Si no puedes consultar el original, limita el juicio de fidelidad; no inventes escenas, tiempos, ediciones ni páginas para completarlo.
 5. **Normativa:** fundamento de valores y distinción entre descripción, evaluación y prescripción; señala premisas normativas necesarias.
 6. **Retórico-performativa:** función del estilo, metáfora, belleza, provocación u oscuridad; examina cuándo sustituyen justificación y cuándo aportan pensamiento.
