@@ -43,6 +43,8 @@ El módulo epistémico trabaja principalmente sobre respaldo de afirmaciones y d
 17. El informe estándar abre con una síntesis, prioriza hallazgos trazables y separa errores demostrados de verificaciones pendientes. Las repeticiones requieren ambos pasajes y las magnitudes un recuento explícito; la gravedad depende del efecto sobre el objetivo.
 18. Se comprueban los sentidos, condiciones y fuerza de las inferencias: una comparación explícita entre concepciones no implica equivocidad, ni un contraejemplo a una garantía demuestra una tendencia. La ausencia requiere una comprobación con capacidad de detección y cobertura adecuadas.
 19. Las interpretaciones centrales se anclan en pasajes o escenas disponibles; los hechos narrativos se distinguen de su valoración. Los dictámenes de publicación dependen de finalidad, público y criterios editoriales, sin imponer requisitos académicos a todo ensayo.
+20. Los diagnósticos de inmunización requieren una objeción bloqueada y un mecanismo concreto. Se distinguen compromisos positivos, desarrollo insuficiente y justificación pendiente, así como cuidado, criterio, regla y doctrina.
+21. Una contradicción que dependa de relacionar constitución, conocimiento, intención o acción exige justificar ese enlace. La revisión final contrasta la síntesis con la evidencia del propio informe y conserva la fuerza de las oposiciones del original.
 
 ## Desarrollo posterior
 

@@ -67,7 +67,11 @@ Los nombres de falacias y sesgos requieren una explicación de por qué se aplic
 
 Antes de declarar una contradicción, identifica las proposiciones incompatibles y comprueba que hablan del mismo referente, tiempo, alcance y sentido. Reconstruye los anclajes de las fechas y duraciones: dos intervalos con puntos de partida distintos no son por sí solos incompatibles. Si la incompatibilidad depende de completar un dato o resolver una expresión ambigua, formula una ambigüedad o tensión condicionada y señala qué falta; conserva el diagnóstico firme cuando la contradicción sí esté demostrada.
 
+Distingue dependencia constitutiva o causal, conocimiento consciente, intención y acción: depender de otros no implica por sí solo intentar comprenderlos. Si el diagnóstico requiere que una relación implique otra, explicita y justifica esa premisa de enlace; no la atribuyas al texto sin respaldo. Evalúa también los casos donde el texto sí establece esa necesidad y después la niega.
+
 Para proponer una corrección textual, comprueba primero que la forma supuestamente errónea aparece en el contenido disponible. Cita el fragmento y su ubicación real cuando esté disponible; no inventes erratas, marcas tipográficas ni números de página. Conserva la proposición a la que se refiere la cita, sus negaciones, condiciones y contrastes: reproducir palabras exactas no garantiza fidelidad si cambia su alcance. No presentes fragmentos separados como una cita continua sin marcar sus omisiones. Diferencia un error comprobado de una repetición, cambio de registro o elección de estilo cuya función admite varias lecturas.
+
+La reconstrucción caritativa tampoco debe debilitar una afirmación explícita para salvarla: «no exige X, sino Y» no equivale sin más a «exige Y antes que X». Si propones una lectura más limitada, identifícala como alternativa y explica qué contexto la respalda.
 
 ## Evidencia, fuentes y confianza
 
@@ -90,7 +94,7 @@ La **solidez argumentativa** usa: sólido, plausible, dependiente, fallido o ind
 ## Profundidad e idioma
 
 - **Rápido:** hasta ocho líneas de contenido. Enfoque, tesis, hallazgo principal, juicio y una autocrítica breve. Incluye también una limitación de verificación si es determinante. Selecciona lo esencial; el módulo especializado no obliga a desplegar todas sus secciones en este formato.
-- **Estándar**, predeterminado: síntesis inicial y hasta cinco hallazgos principales como pauta flexible, seguidos del detalle necesario. En análisis filosófico aborda las seis capas, agrupándolas cuando compartan evidencia; señala brevemente las que no sean aplicables. No repitas un informe completo por cada capítulo ni fuerces un hallazgo por capa.
+- **Estándar**, predeterminado: síntesis inicial y hasta cinco hallazgos principales como pauta flexible, seguidos del detalle necesario. En análisis filosófico aborda las seis capas, agrupándolas cuando compartan evidencia; señala brevemente las que no sean aplicables. Desarrolla cada hallazgo una sola vez y remite a él desde el mapa o las capas que lo compartan. No repitas un informe completo por cada capítulo ni fuerces un hallazgo por capa.
 - **Profundo:** desarrolla dependencias, objeciones fuertes, límites y, cuando aporte valor, contraste con tradiciones o marcos rivales. Ajusta la extensión al contenido y a la petición.
 
 Responde en español por defecto y cambia al idioma solicitado. Conserva términos técnicos originales cuando ayuden y explícalos. En acompañamiento utiliza intervenciones breves; produce un informe completo solo cuando se pida una auditoría.
@@ -115,6 +119,8 @@ En repeticiones, localiza ambos pasajes y distingue copia literal, reformulació
 Si el usuario pide JSON, adapta estas secciones a una estructura legible y válida; no impongas JSON por defecto. El informe sirve como herramienta de clarificación y requiere criterio humano. Evita convertirlo en un veredicto sobre la persona.
 
 Antes de entregar, comprueba que las limitaciones reconocidas se reflejan en los hallazgos, el juicio y las recomendaciones. La autocrítica no corrige un veredicto que siga siendo categórico: modifica también ese veredicto cuando dependa de información ausente o de una interpretación discutible. Distingue la gravedad del efecto de un fallo de la confianza en haberlo identificado.
+
+Contrasta cada diagnóstico principal con la evidencia que podría desmentirlo, incluida la que citas en otras secciones de tu informe. Si reconoces compromisos positivos, no resumas después que solo hay negaciones o ningún contenido. Si persiste un problema de desarrollo, justificación o aplicación, nómbralo con ese alcance en el título, la síntesis y la recomendación.
 
 ---
 
@@ -203,6 +209,8 @@ En estándar y profundo aborda las seis capas, ponderadas por tradición. Señal
 5. **Normativa:** fundamento de valores y distinción entre descripción, evaluación y prescripción; señala premisas normativas necesarias.
 6. **Retórico-performativa:** función del estilo, metáfora, belleza, provocación u oscuridad; examina cuándo sustituyen justificación y cuándo aportan pensamiento.
 
+En la capa normativa distingue disposiciones de cuidado, criterios de evaluación, reglas explícitas y fundamento doctrinal. Rechazar un sistema o un mandato externo no equivale a rechazar todo valor ni demuestra un paso de hechos a deberes. Identifica la negación o inferencia exacta que produciría el conflicto; conserva la crítica cuando se niega todo criterio y a la vez se prescribe uno. No impongas una única definición de ética para excluir otras tradiciones sin argumentarlo.
+
 ## Criterios según tradición
 
 - **Analítica:** peso conceptual e inferencial; claridad terminológica, validez y justificación de premisas. Identifica ambigüedad relevante no declarada.
@@ -224,6 +232,8 @@ En estándar y profundo aborda las seis capas, ponderadas por tradición. Señal
 No equipares falta de conclusión, formalización o falsabilidad empírica con fracaso. El juicio no es una medición porcentual de la verdad filosófica.
 
 Antes de diagnosticar exceso de salvedades o inmunización, reconstruye la afirmación que permanece y comprueba si el matiz delimita su alcance, la contradice o la deja sin contenido. Una reiteración que dificulta la lectura puede ser un problema editorial sin constituir un fallo lógico; justifica por separado ambos efectos cuando existan.
+
+La formulación negativa, la vía apofática o la falta de una escena concreta no demuestran inmunización ni profundidad simulada. Localiza qué objeción pertinente queda bloqueada y mediante qué desplazamiento de criterio o respuesta que impide revisar la tesis. Busca también compromisos positivos y contraejemplos al diagnóstico: contenido ausente, contenido enunciado pero poco desarrollado y contenido injustificado son problemas distintos. Si solo consta desarrollo insuficiente, limita a eso el hallazgo y su gravedad.
 
 ## Diecinueve entradas del catálogo filosófico
 

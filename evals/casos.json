@@ -262,5 +262,93 @@
     "contexto": "Auditor seleccionado. Los dos párrafos pertenecen al mismo comentario artístico; no se aportan fuentes externas ni una negación universal explícita de efectos reales.",
     "entrada": "Auditor Filosófico: revisa esta auditoría contra ambos párrafos del comentario. Párrafo 1: «El jardín simboliza reposo porque la composición lo construye así, no porque exista una relación causal entre vegetación y tranquilidad». Párrafo 2: «La vegetación puede influir en cómo nos sentimos, aunque no determina ese estado». La auditoría concluye: «El autor niega categóricamente cualquier efecto causal de la vegetación». ¿Está demostrada esa lectura?",
     "expectativas": ["Considera que no porque puede excluir una explicación de la representación sin negar toda relación real", "Relaciona su lectura con el reconocimiento de influencia en el segundo párrafo", "No atribuye al autor una negación universal categórica sin resolver el alcance del primer pasaje", "Reconoce ambigüedad o tensión condicionada y propone aclararla en lugar de inventar una contradicción firme"]
+  },
+  {
+    "id": "via-negativa-con-compromisos",
+    "contexto": "Auditor seleccionado; fragmento íntegro ficticio, sin fuentes externas.",
+    "entrada": "Auditor Filosófico: revisa este diagnóstico. Texto: «Lía no obedece un código impuesto. Acompaña a quien sufre y procura evitar el daño; no desarrollo aquí cómo resuelve conflictos entre ambos compromisos». Auditoría: «Lía solo se define por negaciones, carece de contenido positivo y está inmunizada frente a toda objeción».",
+    "expectativas": [
+      "Localiza acompañar y evitar daño como compromisos positivos",
+      "Distingue falta de desarrollo de ausencia de contenido",
+      "No deduce inmunización ni profundidad simulada de la forma negativa",
+      "Permite cuestionar cómo resuelve conflictos sin presentar esa carencia como evasión demostrada"
+    ]
+  },
+  {
+    "id": "inmunizacion-con-mecanismo-explicito",
+    "contexto": "Auditor seleccionado; se concede el contraejemplo y el carácter ad hoc de la respuesta para evaluar el argumento.",
+    "entrada": "Auditor Filosófico: examina este intercambio. Tesis: «Este método siempre evita dañar». Objeción concedida: «En este caso el método causó daño». Respuesta: «Todo daño causado por mi método deja de contar como daño por definición; ningún caso podrá obligarme a revisar mi tesis».",
+    "expectativas": [
+      "Identifica la tesis universal y el contraejemplo concedido",
+      "Localiza el cambio de criterio que excluye cualquier revisión",
+      "Diagnostica inmunización con mecanismo concreto",
+      "No confunde esta evasión explícita con una simple salvedad o recurso poético"
+    ]
+  },
+  {
+    "id": "cuidado-sin-doctrina-no-es-contradiccion",
+    "contexto": "Auditor seleccionado; contraste completo de disposiciones y mandato externo.",
+    "entrada": "Auditor Filosófico: ¿se contradice este texto? «No adopto una doctrina ni actúo por mandato externo. Me importa aliviar el dolor ajeno, aunque puedo equivocarme al intentarlo».",
+    "expectativas": [
+      "Distingue ausencia de doctrina de ausencia de valores",
+      "Reconoce la disposición de cuidado sin declarar contradicción",
+      "No inventa una inferencia de hechos a deberes",
+      "Puede pedir razones o criterios sin convertir su falta de desarrollo en incoherencia demostrada"
+    ]
+  },
+  {
+    "id": "negacion-total-de-criterios-y-prescripcion",
+    "contexto": "Auditor seleccionado; ambas frases afirman literalmente lo que dicen sobre cualquier persona y en el mismo ámbito, sin cambio de voz.",
+    "entrada": "Auditor Filosófico: evalúa estas afirmaciones: «Ningún criterio permite nunca decir cómo debe actuar persona alguna. Evitar el sufrimiento es un criterio que siempre permite decir cómo debe actuar cualquier persona».",
+    "expectativas": [
+      "Reconstruye negación universal y afirmación de un criterio normativo",
+      "Identifica incompatibilidad en el mismo ámbito",
+      "No rescata el texto inventando una distinción entre doctrina externa y cuidado que no resuelva sus cuantificadores",
+      "Limita el juicio al argumento sin invalidar toda ética del cuidado"
+    ]
+  },
+  {
+    "id": "dependencia-no-implica-comprension-consciente",
+    "contexto": "Auditor seleccionado; ambas proposiciones pertenecen al mismo texto ficticio completo.",
+    "entrada": "Auditor Filosófico: revisa este diagnóstico. Texto: «Las relaciones con otros moldean la existencia de cada persona. Leo no intenta comprender conscientemente a sus vecinos». Auditoría: «Leo queda fuera de lo humano o la tesis relacional es falsa; hay una contradicción demostrada».",
+    "expectativas": [
+      "Distingue dependencia relacional e intento consciente de comprender",
+      "Reconoce que ambas proposiciones pueden ser verdaderas",
+      "Identifica la premisa de enlace ausente en el dilema del auditor",
+      "No concluye que Leo sea inhumano ni que toda tesis relacional sea falsa"
+    ]
+  },
+  {
+    "id": "necesidad-explicita-y-caso-incompatible",
+    "contexto": "Auditor seleccionado; las frases se refieren a la misma tarea, momento y significado de comprender.",
+    "entrada": "Auditor Filosófico: ¿es coherente este argumento? «Para ejecutar esta tarea es necesario comprender conscientemente la instrucción. Sol ejecutó esta tarea sin comprender conscientemente esa instrucción».",
+    "expectativas": [
+      "Localiza la condición necesaria explícita",
+      "Identifica el caso que afirma ejecución sin la condición",
+      "Conserva el diagnóstico de incompatibilidad sin inventar diferencias de tarea o momento",
+      "Señala que se debe revisar la necesidad o el relato del caso, sin decidir cuál es falso sin más datos"
+    ]
+  },
+  {
+    "id": "sintesis-contra-evidencia-del-propio-informe",
+    "contexto": "Auditor seleccionado; se evalúa la coherencia del informe completo aportado, no un documento externo ausente.",
+    "entrada": "Auditor Filosófico: revisa esta auditoría. Síntesis: «La propuesta no contiene ningún compromiso positivo». Evidencia: «El texto propone acompañar a quien sufre y compartir el alimento, pero no explica cómo prioriza ambas acciones». Recomendación: «Añadir el primer compromiso positivo».",
+    "expectativas": [
+      "Detecta que síntesis y recomendación contradicen la evidencia reconocida",
+      "Distingue compromisos existentes de falta de desarrollo sobre prioridades",
+      "Propone corregir síntesis y recomendación, no solo añadir una autocrítica",
+      "No necesita inventar ni consultar otro documento para detectar la incoherencia del informe"
+    ]
+  },
+  {
+    "id": "exclusion-no-es-prioridad-temporal",
+    "contexto": "Auditor seleccionado; el fragmento es íntegro, sin contexto que autorice atenuar su oposición.",
+    "entrada": "Auditor Filosófico: comprueba esta paráfrasis. Original: «El daño no exige reparación, sino presencia». Paráfrasis presentada como fiel: «El daño exige presencia antes que reparación».",
+    "expectativas": [
+      "Conserva el contraste explícito entre reparación y presencia",
+      "Detecta que la paráfrasis convierte exclusión en prioridad temporal",
+      "No salva automáticamente el original mediante la versión atenuada",
+      "Puede proponer una reformulación como cambio del texto, distinguiéndola de lo que este afirma"
+    ]
   }
 ]
