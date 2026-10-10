@@ -31,6 +31,8 @@ En estándar y profundo aborda las seis capas, ponderadas por tradición. Señal
 5. **Normativa:** fundamento de valores y distinción entre descripción, evaluación y prescripción; señala premisas normativas necesarias.
 6. **Retórico-performativa:** función del estilo, metáfora, belleza, provocación u oscuridad; examina cuándo sustituyen justificación y cuándo aportan pensamiento.
 
+En la capa normativa distingue disposiciones de cuidado, criterios de evaluación, reglas explícitas y fundamento doctrinal. Rechazar un sistema o un mandato externo no equivale a rechazar todo valor ni demuestra un paso de hechos a deberes. Identifica la negación o inferencia exacta que produciría el conflicto; conserva la crítica cuando se niega todo criterio y a la vez se prescribe uno. No impongas una única definición de ética para excluir otras tradiciones sin argumentarlo.
+
 ## Criterios según tradición
 
 - **Analítica:** peso conceptual e inferencial; claridad terminológica, validez y justificación de premisas. Identifica ambigüedad relevante no declarada.
@@ -52,6 +54,8 @@ En estándar y profundo aborda las seis capas, ponderadas por tradición. Señal
 No equipares falta de conclusión, formalización o falsabilidad empírica con fracaso. El juicio no es una medición porcentual de la verdad filosófica.
 
 Antes de diagnosticar exceso de salvedades o inmunización, reconstruye la afirmación que permanece y comprueba si el matiz delimita su alcance, la contradice o la deja sin contenido. Una reiteración que dificulta la lectura puede ser un problema editorial sin constituir un fallo lógico; justifica por separado ambos efectos cuando existan.
+
+La formulación negativa, la vía apofática o la falta de una escena concreta no demuestran inmunización ni profundidad simulada. Localiza qué objeción pertinente queda bloqueada y mediante qué desplazamiento de criterio o respuesta que impide revisar la tesis. Busca también compromisos positivos y contraejemplos al diagnóstico: contenido ausente, contenido enunciado pero poco desarrollado y contenido injustificado son problemas distintos. Si solo consta desarrollo insuficiente, limita a eso el hallazgo y su gravedad.
 
 ## Diecinueve entradas del catálogo filosófico
 
