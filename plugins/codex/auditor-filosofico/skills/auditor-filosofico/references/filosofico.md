@@ -8,6 +8,8 @@ Identifica tradición predominante y cruces: analítica, continental/hermenéuti
 
 Identifica el movimiento: defender una tesis, abrir un problema, redefinir un concepto, criticar una posición, interpretar o describir una experiencia. Reconstruye tesis explícita/implícita/abierta, movimientos conceptuales, supuestos metafilosóficos y cadena de dependencias. Explicita qué cuenta como evidencia, explicación y éxito para ese texto.
 
+Una tesis modesta o ampliamente aceptada no es una tautología por ese motivo. Identifica qué contribución promete el texto —explicar, interpretar, distinguir o defender— y evalúa si la cumple.
+
 ## Ficción, poesía y cartas literarias
 
 Distingue autor, narrador, destinatario y personajes. Determina qué función cumple el pasaje cuestionado: tesis, metáfora, testimonio, dramatización o expresión de una voz posiblemente no fiable. Justifica esa lectura con el texto; ni el género ni la primera persona bastan para atribuir una posición al autor o declarar poco fiable una voz.
@@ -22,10 +24,10 @@ Ajusta las recomendaciones editoriales a la petición y a dificultades documenta
 
 En estándar y profundo aborda las seis capas, ponderadas por tradición. Señala cuando una no aplique al contenido:
 
-1. **Conceptual:** consistencia de términos, equivocidad ordinaria/técnica y definiciones estipulativas frente a pretensiones de descubrimiento.
+1. **Conceptual:** consistencia de términos, equivocidad ordinaria/técnica y definiciones estipulativas frente a pretensiones de descubrimiento. Sigue los sentidos y criterios de éxito de los términos centrales entre premisas y conclusión. Distingue un cambio injustificado de criterio de un contraste explícito entre concepciones; este último no constituye por sí solo equivocidad.
 2. **Inferencial:** validez o legitimidad de pasos, premisas ocultas e intuiciones que soportan el razonamiento. Reconoce movimientos legítimos propios del método usado.
 3. **Dialéctica:** respuesta a objeciones fuertes, reconstrucción caritativa de rivales y mejor contraargumento omitido.
-4. **Hermenéutica:** fidelidad interpretativa, contexto, lecturas selectivas y distinción entre lo dicho por un autor y la lectura propuesta. Si no puedes consultar el pasaje original, limita el juicio de fidelidad.
+4. **Hermenéutica:** fidelidad interpretativa, contexto, lecturas selectivas y distinción entre lo dicho por un autor y la lectura propuesta. Vincula cada interpretación central a un pasaje o escena disponible y al rasgo que la sostiene. Comprueba los personajes, desenlaces o citas usados como premisas contra la obra accesible, distinguiendo hechos de la obra y valoración interpretativa. Si no puedes consultar el original, limita el juicio de fidelidad; no inventes escenas, tiempos, ediciones ni páginas para completarlo.
 5. **Normativa:** fundamento de valores y distinción entre descripción, evaluación y prescripción; señala premisas normativas necesarias.
 6. **Retórico-performativa:** función del estilo, metáfora, belleza, provocación u oscuridad; examina cuándo sustituyen justificación y cuándo aportan pensamiento.
 
@@ -48,6 +50,8 @@ En estándar y profundo aborda las seis capas, ponderadas por tradición. Señal
 - **Indeterminado:** falta información suficiente o el texto abre legítimamente un problema sin resolverlo. Distingue esos motivos.
 
 No equipares falta de conclusión, formalización o falsabilidad empírica con fracaso. El juicio no es una medición porcentual de la verdad filosófica.
+
+Antes de diagnosticar exceso de salvedades o inmunización, reconstruye la afirmación que permanece y comprueba si el matiz delimita su alcance, la contradice o la deja sin contenido. Una reiteración que dificulta la lectura puede ser un problema editorial sin constituir un fallo lógico; justifica por separado ambos efectos cuando existan.
 
 ## Diecinueve entradas del catálogo filosófico
 
@@ -85,6 +89,8 @@ Proceden del prompt filosófico aportado al proyecto. Cada aplicación requiere 
 19. Reificación filosófica.
 
 ## Omisiones y preguntas
+
+Antes de declarar ausente un marco, ejemplo o argumento, comprueba la unidad textual disponible: puede aparecer después o desarrollarse con otras palabras. Para objeciones, distingue si están ausentes, mencionadas, desarrolladas o respondidas, y evalúa la fuerza de la respuesta. Una objeción hipotética presentada como tal no exige un crítico real; si se atribuye a una persona o escuela, exige una reconstrucción fiel de su posición.
 
 Identifica contraargumentos serios, tradiciones que aporten una objeción útil, evidencia empírica pertinente y distinciones ausentes. No exijas evidencia empírica donde el objetivo sea legítimamente conceptual o descriptivo de experiencia.
 

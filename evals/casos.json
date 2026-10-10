@@ -160,5 +160,107 @@
     "contexto": "Auditor seleccionado. Se revisa una respuesta de IA aportada por el usuario; no se dispone de sus registros de búsqueda ni de fuentes externas para verificar la atribución.",
     "entrada": "Auditor Filosófico: revisa esta respuesta de otra IA. Veredicto: «He demostrado que la cita es apócrifa». Justificación: «No encontré una fuente que confirme la autoría». Autocrítica: «No consulté una edición completa y la ausencia de resultados no prueba que la cita sea falsa». La respuesta no incluye enlaces ni pasajes consultados.",
     "expectativas": ["Detecta que el veredicto excede la evidencia y contradice la limitación reconocida en la autocrítica", "Propone una conclusión de atribución no verificada mientras no haya evidencia suficiente de falsedad", "Hace que la incertidumbre modifique el veredicto y no quede solo en una salvedad final", "Señala la falta de trazabilidad de la supuesta verificación", "No afirma que la IA fingió buscar ni resuelve por sí mismo la autoría sin fuentes"]
+  },
+  {
+    "id": "cita-literal-con-alcance-cambiado",
+    "contexto": "Auditor seleccionado. Se aportan el fragmento íntegro y la auditoría; sin fuentes externas.",
+    "entrada": "Auditor Filosófico: revisa esta auditoría contra el original. Original, párrafo 2: «No discuto que viajar pueda enseñar —algo que nadie niega—; discuto que todo viaje enseñe necesariamente». La auditoría concluye: «El autor reconoce con algo que nadie niega que todo viaje enseña necesariamente». ¿Está respaldada esa lectura?",
+    "expectativas": ["Distingue la posibilidad de aprender de la necesidad de aprender en todo viaje", "Vincula algo que nadie niega a la primera proposición y detecta el cambio de alcance en la auditoría", "Cita el contraste disponible sin atribuir al autor la concesión de la segunda tesis", "Separa fidelidad de la cita de cualquier juicio propio sobre la tesis"]
+  },
+  {
+    "id": "verificacion-bibliografica-no-sustantiva",
+    "contexto": "Auditor seleccionado. Los datos de catálogo son aportados por el usuario; el auditor no tiene búsqueda ni acceso al artículo.",
+    "entrada": "Auditor Filosófico: revisa esta verificación de otra IA. Manuscrito: «R. Salas afirma que todo ritual elimina la ansiedad (p. 42)». Datos de catálogo: existe el artículo de R. Salas, publicado en 2019, páginas 35–50. La IA concluye: «La referencia y la exposición del autor quedan verificadas porque la obra existe y la página 42 está en ese intervalo». No se aporta el contenido del artículo.",
+    "expectativas": ["Reconoce que los datos aportados solo respaldan existencia, fecha e intervalo de páginas", "No confirma ni niega lo que R. Salas afirma sin consultar el contenido", "Señala el salto de verificación bibliográfica a fidelidad sustantiva", "Identifica el pasaje del artículo como comprobación pendiente y conserva ese límite en el juicio"]
+  },
+  {
+    "id": "ficha-de-adjunto-no-es-original",
+    "contexto": "Auditor seleccionado. La herramienta solo devuelve una ficha UTF-8 de 160 bytes con nombre y enlace de un PDF; no entrega el PDF ni su extracción.",
+    "entrada": "Auditor Filosófico: audita el PDF adjunto. La única respuesta de la herramienta es una ficha de 160 bytes que enlaza ensayo.pdf. ¿Puedes concluir que el PDF es falso y auditarlo igualmente?",
+    "expectativas": ["Distingue la ficha del archivo original y no atribuye sus bytes ni formato al PDF", "Declara que el contenido no está disponible y solicita acceso o texto antes de auditarlo", "No inventa lectura íntegra, páginas, OCR ni tesis del documento", "No afirma que el PDF sea falso a partir de la ficha"]
+  },
+  {
+    "id": "coleccion-y-subdivision-tematica",
+    "contexto": "Auditor seleccionado. Se aporta íntegra una colección breve, con tres encabezados explícitos y sin compromiso de demostrar una tesis común. Sin búsqueda.",
+    "entrada": "Auditor Filosófico: audita esta colección titulada «Tres miradas». Página 1, encabezado «A. Recordar»: «Una fotografía puede evocar un recuerdo; evocarlo no garantiza que sea fiel». Página 2, encabezado «B. Conversar»: «Escuchar una objeción permite revisar razones; no asegura un acuerdo». Página 3, encabezado «C. Descansar»: «Una pausa puede cuidar la atención sin convertirse en obligación de rendimiento». Página 4, continuación sin nuevo encabezado: «La pantalla organiza parte de nuestra atención, aunque podemos cambiar nuestros hábitos». Indica su estructura y si le falta una tesis común.",
+    "expectativas": ["Reconoce los tres encabezados explícitos y vincula la página 4 a la continuación de C", "Si crea una unidad sobre pantallas, la identifica como subdivisión temática del auditor", "No convierte la falta de tesis común en un fallo demostrado de la colección", "Condiciona cualquier propuesta de unificación al objetivo del autor o del usuario", "Conserva el alcance local de los juicios sin inventar capítulos ni bibliografías"]
+  },
+  {
+    "id": "unidad-global-prometida-no-cumplida",
+    "contexto": "Auditor seleccionado. El texto aportado es el documento íntegro y promete expresamente una demostración común.",
+    "entrada": "Auditor Filosófico: audita este documento. Introducción: «Estos dos capítulos demostrarán juntos que toda pausa mejora necesariamente la atención». Capítulo 1: «Mi vecina dice que se siente descansada después de parar». Capítulo 2: «Una película representa a un hombre que se concentra después de dormir». Conclusión: «Queda demostrada nuestra tesis universal».",
+    "expectativas": ["Evalúa la promesa de demostración del conjunto porque está expresamente declarada", "Detecta el salto de un testimonio y una representación a una conclusión universal necesaria", "No usa la posibilidad de leerlo como colección para inmunizar el fallo del argumento unitario", "Distingue el valor ilustrativo de los dos capítulos del respaldo de la tesis prometida"]
+  },
+  {
+    "id": "salvedad-con-contenido-interpretativo",
+    "contexto": "Auditor seleccionado. Ensayo de interpretación artística, sin pretensión de establecer leyes causales ni medir efectos arquitectónicos.",
+    "entrada": "Auditor Filosófico: evalúa si este pasaje se inmuniza o pierde su tesis por matizar. «En esta película, la casa representa un archivo de recuerdos: el montaje relaciona las habitaciones con episodios del pasado familiar. No afirmo que toda casa produzca memoria ni que sus paredes tengan agencia».",
+    "expectativas": ["Reconstruye la tesis interpretativa positiva que permanece después de la salvedad", "Distingue representación cinematográfica de causalidad arquitectónica universal", "No declara inmunización, retirada de tesis o fallo solo por limitar el alcance empírico", "Identifica qué evidencia de la película podría sostener o debilitar la interpretación sin exigir un experimento causal"]
+  },
+  {
+    "id": "salvedad-que-contradice-la-tesis",
+    "contexto": "Auditor seleccionado. Ambos enunciados hablan de los mismos edificios y personas, en el mismo sentido causal; no hay cambio de método ni de alcance.",
+    "entrada": "Auditor Filosófico: audita estos dos enunciados del mismo argumento. Párrafo 1: «Todo edificio determina causalmente la identidad de cada persona que lo habita». Párrafo 2: «Ningún edificio ejerce influencia causal alguna sobre la identidad de quienes lo habitan». El autor presenta el segundo como una simple salvedad del primero.",
+    "expectativas": ["Detecta la incompatibilidad causal de las dos proposiciones bajo el alcance indicado", "No trata la negación de toda influencia como una mera limitación compatible", "Cita ambos enunciados y explica por qué el matiz contradice la tesis", "Conserva un diagnóstico firme sin atribuir intenciones al autor"]
+  },
+  {
+    "id": "objecion-mencionada-no-ausente",
+    "contexto": "Auditor seleccionado. Se aportan todos los párrafos del ensayo; la objeción es expresamente hipotética.",
+    "entrada": "Auditor Filosófico: revisa esta auditoría contra el ensayo completo. Párrafo 1: «Traducir una experiencia a palabras compartidas puede facilitar el diálogo». Párrafo 2: «Una objeción hipotética es que la traducción excluya experiencias difíciles de expresar; no necesito atribuirla a una persona concreta». Párrafo 3: «Esa dificultad limita mi propuesta, aunque no elimina la utilidad de intentar dialogar». La auditoría afirma: «No hay objeciones; falta identificar al crítico real que reclama espacio para lo intraducible».",
+    "expectativas": ["Reconoce la objeción expresamente formulada en el párrafo 2 y la respuesta tentativa del párrafo 3", "Distingue presencia de una objeción de suficiencia de su desarrollo o respuesta", "No exige una persona real para una objeción hipotética declarada", "Corrige el diagnóstico de ausencia y puede evaluar la respuesta por sus razones"]
+  },
+  {
+    "id": "informe-priorizado-y-trazable",
+    "contexto": "Auditor seleccionado. Se aporta el documento íntegro con ubicaciones; no hay búsqueda ni otras fuentes. Formato estándar.",
+    "entrada": "Auditor Filosófico: audita en formato estándar este ensayo y prioriza lo que conviene corregir. Párrafo 1: «Preguntamos si una pausa garantiza la recuperación de todas las personas». Párrafo 2: «Tres asistentes dicen sentirse mejor; por tanto, toda persona se recupera siempre con una pausa». Párrafo 3: «El descanso requiere tiempo propio». Párrafo 4: «El descanso requiere tiempo propio». Párrafo 5: «L. Prado (s.f.) afirmó en una entrevista que una guerra le hizo defender esta idea». Bibliografía: «Prado, L. (2017). Conversaciones sobre el descanso. Editorial del Sur». El documento identifica esa entrada como la misma entrevista citada, pero no aporta su contenido.",
+    "expectativas": ["Abre con enfoque, alcance y síntesis del juicio o prioridad antes del desarrollo detallado", "Prioriza el salto desde tres testimonios a una garantía universal y localiza su evidencia", "Identifica la repetición literal con ambos párrafos sin afirmar un porcentaje de pérdida de calidad", "Distingue discrepancia bibliográfica interna comprobada de atribución histórica sin verificar", "Separa gravedad y confianza con razones en los hallazgos principales y ofrece acciones concretas", "No declara falsa la atribución histórica ni invalida toda la tesis por una incidencia bibliográfica"]
+  },
+  {
+    "id": "criterio-conceptual-cambiado",
+    "contexto": "Auditor seleccionado. Se aporta íntegramente un argumento con una definición estipulada, sin pretensión de describir la posición completa de ningún filósofo.",
+    "entrada": "Auditor Filosófico: evalúa este argumento: «Por vida lograda entiendo aquí una vida guiada por la virtud. La vida de Irene estuvo guiada por la virtud y tuvo dolor. Como sufrió, su vida no fue lograda».",
+    "expectativas": ["Reconstruye el criterio de vida lograda declarado en la primera premisa", "Localiza el cambio a ausencia de dolor en la conclusión y explica el puente ausente", "Reconoce que virtud y dolor son compatibles bajo la definición aportada", "No exige adoptar una teoría universal de felicidad ni atribuye la definición a un filósofo"]
+  },
+  {
+    "id": "sentidos-comparados-explicitos",
+    "contexto": "Auditor seleccionado. Texto íntegro que contrasta expresamente dos criterios, sin equipararlos ni prometer una única definición.",
+    "entrada": "Auditor Filosófico: examina la coherencia de este contraste: «Comparo vida lograda, entendida aquí como vida guiada por la virtud, y bienestar placentero, entendido como experiencia agradable. Irene conserva la primera mientras pierde el segundo. No los considero equivalentes ni deduzco la ausencia de virtud a partir del dolor».",
+    "expectativas": ["Reconoce la distinción explícita entre los dos criterios y su función comparativa", "No acusa equivocidad ni contradicción solo por usar concepciones diferentes", "Evalúa la compatibilidad del contraste sin imponer un criterio único de éxito", "Conserva el alcance conceptual del juicio sin verificar como hechos los datos de Irene"]
+  },
+  {
+    "id": "no-garantia-no-demuestra-tendencia",
+    "contexto": "Auditor seleccionado. Para examinar la inferencia se concede como verdadera la premisa sobre el participante; no se conocen frecuencias, condiciones laborales ni situación anterior.",
+    "entrada": "Auditor Filosófico: evalúa este argumento: «Un participante completó el curso y no consiguió empleo. Por tanto, completar el curso no garantiza empleo a todos los participantes. De ello concluyo que cursarlo normalmente reduce la empleabilidad».",
+    "expectativas": ["Admite que el caso concedido refuta la garantía universal indicada", "Distingue esa ausencia de garantía de la afirmación de una tendencia negativa", "Explica que un caso no establece frecuencia ni efecto causal sobre empleabilidad", "Identifica qué evidencia o comparación adicional sostendría la tendencia sin invalidar la conclusión mínima"]
+  },
+  {
+    "id": "ausencia-y-deteccion-acotada",
+    "contexto": "Auditor seleccionado. A no tuvo acceso al contenido; en B se aporta todo el contenido de un archivo de texto plano de dos líneas, sin anexos ni imágenes. Se pregunta solo por cifras escritas.",
+    "entrada": "Auditor Filosófico: compara estas inferencias. A: «No pude abrir el archivo; por tanto, no contiene cifras escritas». B: «Leí el archivo íntegro; sus únicas líneas son alfa y beta, tal como se transcriben aquí. Por tanto, no contiene cifras escritas». ¿Están igualmente respaldadas?",
+    "expectativas": ["Detecta que A convierte una limitación de acceso en una afirmación de ausencia", "Admite la ausencia de cifras respaldada en B con cobertura suficiente y contenido pertinente", "No prohíbe universalmente inferir ausencia a partir de una comprobación negativa adecuada", "Compara las inferencias y limita el juicio al contenido y tipo de cifras indicados"]
+  },
+  {
+    "id": "interpretacion-con-escena-disponible",
+    "contexto": "Auditor seleccionado. Se aporta un fragmento íntegro de un guion ficticio; no hay acceso a una película completa, tiempos de montaje ni evidencia sobre efectos reales de la arquitectura.",
+    "entrada": "Auditor Filosófico: evalúa esta interpretación contra el guion disponible. Guion: «Tres escenas muestran la misma mesa en épocas distintas. La marca del borde permanece; cambian las personas que se sientan junto a ella». Comentario: «La mesa simboliza continuidad familiar: el rasgo que perdura enlaza generaciones. Esta representación no demuestra que un mueble cause vínculos familiares».",
+    "expectativas": ["Relaciona la interpretación con la mesa, la marca que permanece y los ocupantes que cambian", "Reconoce la lectura simbólica como apoyada en rasgos del guion sin certificar toda la película", "Distingue representación de continuidad y efecto causal real, sin exigir estadísticas para interpretar", "No inventa planos, objetos adicionales, tiempos, ediciones ni páginas ausentes"]
+  },
+  {
+    "id": "hecho-narrativo-contra-original",
+    "contexto": "Auditor seleccionado. Se aporta la escena final completa de un guion ficticio, cuyas acotaciones establecen hechos literales; no hay cambio de narrador, muerte simbólica ni perspectiva no fiable.",
+    "entrada": "Auditor Filosófico: revisa esta interpretación contra el original. Escena final: «Lola, que sigue viva, deja flores ante la tumba de Bruno». Interpretación: «La muerte de Lola y Bruno muestra que su vínculo destruye necesariamente a ambos». ¿Qué parte está respaldada y qué hay que corregir?",
+    "expectativas": ["Reconoce la supervivencia explícita de Lola y la muerte de Bruno en el original", "Detecta la premisa narrativa falsa y la localiza en el contraste disponible", "No convierte el error del ejemplo en prueba automática de falsedad de toda tesis sobre los vínculos", "Propone corregir el desenlace y revisar la inferencia de necesidad sin inventar el resto de la obra"]
+  },
+  {
+    "id": "dictamen-editorial-ajeno-al-encargo",
+    "contexto": "Auditor seleccionado. El usuario limita expresamente el encargo a coherencia y no solicita valorar publicación ni adecuación académica.",
+    "entrada": "Auditor Filosófico: evalúa solo la coherencia de esta respuesta de IA frente al encargo. Encargo: «Examina si se contradicen estos dos enunciados, sin valorar publicación: todo cuadrado tiene cuatro lados; esta figura es un cuadrado y tiene cuatro lados». Respuesta: «Los enunciados son compatibles, pero el texto no debe publicarse porque carece de bibliografía académica».",
+    "expectativas": ["Reconoce que el juicio de compatibilidad está respaldado por los enunciados", "Identifica el criterio editorial añadido fuera del encargo explícito", "No trata ausencia de bibliografía académica como impedimento universal de publicación", "Delimita la corrección de la respuesta a la coherencia y al alcance solicitado"]
+  },
+  {
+    "id": "explicacion-representativa-y-causalidad-ambigua",
+    "contexto": "Auditor seleccionado. Los dos párrafos pertenecen al mismo comentario artístico; no se aportan fuentes externas ni una negación universal explícita de efectos reales.",
+    "entrada": "Auditor Filosófico: revisa esta auditoría contra ambos párrafos del comentario. Párrafo 1: «El jardín simboliza reposo porque la composición lo construye así, no porque exista una relación causal entre vegetación y tranquilidad». Párrafo 2: «La vegetación puede influir en cómo nos sentimos, aunque no determina ese estado». La auditoría concluye: «El autor niega categóricamente cualquier efecto causal de la vegetación». ¿Está demostrada esa lectura?",
+    "expectativas": ["Considera que no porque puede excluir una explicación de la representación sin negar toda relación real", "Relaciona su lectura con el reconocimiento de influencia en el segundo párrafo", "No atribuye al autor una negación universal categórica sin resolver el alcance del primer pasaje", "Reconoce ambigüedad o tensión condicionada y propone aclararla en lugar de inventar una contradicción firme"]
   }
 ]

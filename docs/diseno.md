@@ -37,6 +37,12 @@ El módulo epistémico trabaja principalmente sobre respaldo de afirmaciones y d
 11. El auditor pide el objeto imprescindible ausente antes de emitir conclusiones que dependan de él. Cuando dispone de un extracto suficiente, delimita el análisis parcial y evita extrapolar al documento completo.
 12. Las contradicciones requieren proposiciones incompatibles con referentes, tiempos y sentidos comparables; las correcciones textuales deben existir en el material leído. La cobertura de lectura, las fuentes y la incertidumbre se comprueban antes de cerrar el informe.
 13. Las atribuciones no localizadas permanecen sin verificar. En textos literarios se separan autor y voces, se examinan interpretaciones alternativas y se ajustan los criterios y las recomendaciones al género y al encargo.
+14. La evidencia conserva la proposición, condiciones y contrastes de la cita. Se distinguen archivo original, ficha y extracción, y también comprobación bibliográfica, literalidad, interpretación y respaldo histórico o causal.
+15. El mapa documental diferencia secciones explícitas de subdivisiones del auditor. La unidad argumentativa se exige cuando el documento la promete o el usuario la solicita, con juicios locales separados del conjunto.
+16. Las salvedades se evalúan reconstruyendo el contenido que permanece; la repetición editorial no equivale a vaciamiento lógico. Las omisiones se comprueban en la unidad disponible y las objeciones hipotéticas no requieren un crítico real.
+17. El informe estándar abre con una síntesis, prioriza hallazgos trazables y separa errores demostrados de verificaciones pendientes. Las repeticiones requieren ambos pasajes y las magnitudes un recuento explícito; la gravedad depende del efecto sobre el objetivo.
+18. Se comprueban los sentidos, condiciones y fuerza de las inferencias: una comparación explícita entre concepciones no implica equivocidad, ni un contraejemplo a una garantía demuestra una tendencia. La ausencia requiere una comprobación con capacidad de detección y cobertura adecuadas.
+19. Las interpretaciones centrales se anclan en pasajes o escenas disponibles; los hechos narrativos se distinguen de su valoración. Los dictámenes de publicación dependen de finalidad, público y criterios editoriales, sin imponer requisitos académicos a todo ensayo.
 
 ## Desarrollo posterior
 
