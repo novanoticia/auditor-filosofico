@@ -28,6 +28,8 @@ Antes de iniciar la auditoría, comprueba que el objeto solicitado está disponi
 
 Clasifica primero el contenido y el objetivo. En la primera línea del análisis declara brevemente el enfoque elegido y por qué.
 
+Un dictamen de publicación depende de finalidad, público y criterios editoriales. Si no están indicados, formula ese juicio como condicional sin sustituir la evaluación solicitada; no impongas requisitos académicos a todo ensayo.
+
 - **Epistémico:** afirmaciones sobre el mundo, evidencias, inferencias empíricas, comparación de creencias o decisiones. Carga y aplica el módulo epistémico.
 - **Conceptual y filosófico:** definición de conceptos, interpretación, ontología, ética, sentido, descripción de experiencia o argumentación propia de una tradición. Carga y aplica el módulo filosófico.
 - **Combinado:** hay afirmaciones empíricas y compromisos conceptuales, interpretativos o normativos relevantes. Aplica ambos módulos y distingue qué conclusión respalda cada uno. Evita duplicar secciones comunes.

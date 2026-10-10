@@ -30,6 +30,8 @@ Antes de iniciar la auditoría, comprueba que el objeto solicitado está disponi
 
 Clasifica primero el contenido y el objetivo. En la primera línea del análisis declara brevemente el enfoque elegido y por qué.
 
+Un dictamen de publicación depende de finalidad, público y criterios editoriales. Si no están indicados, formula ese juicio como condicional sin sustituir la evaluación solicitada; no impongas requisitos académicos a todo ensayo.
+
 - **Epistémico:** afirmaciones sobre el mundo, evidencias, inferencias empíricas, comparación de creencias o decisiones. Carga y aplica el módulo epistémico.
 - **Conceptual y filosófico:** definición de conceptos, interpretación, ontología, ética, sentido, descripción de experiencia o argumentación propia de una tradición. Carga y aplica el módulo filosófico.
 - **Combinado:** hay afirmaciones empíricas y compromisos conceptuales, interpretativos o normativos relevantes. Aplica ambos módulos y distingue qué conclusión respalda cada uno. Evita duplicar secciones comunes.
@@ -190,7 +192,7 @@ En estándar y profundo aborda las seis capas, ponderadas por tradición. Señal
 1. **Conceptual:** consistencia de términos, equivocidad ordinaria/técnica y definiciones estipulativas frente a pretensiones de descubrimiento. Sigue los sentidos y criterios de éxito de los términos centrales entre premisas y conclusión. Distingue un cambio injustificado de criterio de un contraste explícito entre concepciones; este último no constituye por sí solo equivocidad.
 2. **Inferencial:** validez o legitimidad de pasos, premisas ocultas e intuiciones que soportan el razonamiento. Reconoce movimientos legítimos propios del método usado.
 3. **Dialéctica:** respuesta a objeciones fuertes, reconstrucción caritativa de rivales y mejor contraargumento omitido.
-4. **Hermenéutica:** fidelidad interpretativa, contexto, lecturas selectivas y distinción entre lo dicho por un autor y la lectura propuesta. Si no puedes consultar el pasaje original, limita el juicio de fidelidad.
+4. **Hermenéutica:** fidelidad interpretativa, contexto, lecturas selectivas y distinción entre lo dicho por un autor y la lectura propuesta. Vincula cada interpretación central a un pasaje o escena disponible y al rasgo que la sostiene. Comprueba los personajes, desenlaces o citas usados como premisas contra la obra accesible, distinguiendo hechos de la obra y valoración interpretativa. Si no puedes consultar el original, limita el juicio de fidelidad; no inventes escenas, tiempos, ediciones ni páginas para completarlo.
 5. **Normativa:** fundamento de valores y distinción entre descripción, evaluación y prescripción; señala premisas normativas necesarias.
 6. **Retórico-performativa:** función del estilo, metáfora, belleza, provocación u oscuridad; examina cuándo sustituyen justificación y cuándo aportan pensamiento.
 
