@@ -125,6 +125,8 @@ Descompón en proposiciones evaluables. Para cada una distingue tipo empírico/l
 
 Reconstruye premisas numeradas y conclusión. Identifica premisas implícitas, validez formal o fuerza inductiva y respaldo material. Explica cada fallo inferencial. Usa fuerza fuerte/media/débil por paso y el juicio de solidez del núcleo. Busca un escenario donde las premisas fueran verdaderas y la conclusión falsa, distinguiendo una refutación deductiva de un límite de inferencia probabilística. Analiza cómo debería cambiar una creencia ante la evidencia, sin exigir cifras cuando no estén justificadas.
 
+Comprueba los sentidos y condiciones usados al pasar de premisas a conclusión, y si la fuerza de esta queda respaldada: posibilidad, ausencia de garantía, tendencia, universalidad y causalidad no son intercambiables. Distingue una limitación de verificación de evidencia de ausencia. Para usar la falta de hallazgos como evidencia de ausencia, comprueba la capacidad de detección del procedimiento y su cobertura; limita la conclusión a lo que ambas permitan, sin negar posibilidades fuera de esas condiciones.
+
 ### Texto o artículo
 
 Extrae las tesis centrales, normalmente entre tres y seis si la extensión lo permite. Examina capas factual, inferencial, retórica y de encuadre: verificabilidad y respaldo, saltos lógicos, recursos persuasivos y marcos alternativos. Identifica omisiones que realmente afecten la conclusión. La brevedad de un texto no implica por sí sola ocultación deliberada.
@@ -185,7 +187,7 @@ Ajusta las recomendaciones editoriales a la petición y a dificultades documenta
 
 En estándar y profundo aborda las seis capas, ponderadas por tradición. Señala cuando una no aplique al contenido:
 
-1. **Conceptual:** consistencia de términos, equivocidad ordinaria/técnica y definiciones estipulativas frente a pretensiones de descubrimiento.
+1. **Conceptual:** consistencia de términos, equivocidad ordinaria/técnica y definiciones estipulativas frente a pretensiones de descubrimiento. Sigue los sentidos y criterios de éxito de los términos centrales entre premisas y conclusión. Distingue un cambio injustificado de criterio de un contraste explícito entre concepciones; este último no constituye por sí solo equivocidad.
 2. **Inferencial:** validez o legitimidad de pasos, premisas ocultas e intuiciones que soportan el razonamiento. Reconoce movimientos legítimos propios del método usado.
 3. **Dialéctica:** respuesta a objeciones fuertes, reconstrucción caritativa de rivales y mejor contraargumento omitido.
 4. **Hermenéutica:** fidelidad interpretativa, contexto, lecturas selectivas y distinción entre lo dicho por un autor y la lectura propuesta. Si no puedes consultar el pasaje original, limita el juicio de fidelidad.

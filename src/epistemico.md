@@ -14,6 +14,8 @@ Descompón en proposiciones evaluables. Para cada una distingue tipo empírico/l
 
 Reconstruye premisas numeradas y conclusión. Identifica premisas implícitas, validez formal o fuerza inductiva y respaldo material. Explica cada fallo inferencial. Usa fuerza fuerte/media/débil por paso y el juicio de solidez del núcleo. Busca un escenario donde las premisas fueran verdaderas y la conclusión falsa, distinguiendo una refutación deductiva de un límite de inferencia probabilística. Analiza cómo debería cambiar una creencia ante la evidencia, sin exigir cifras cuando no estén justificadas.
 
+Comprueba los sentidos y condiciones usados al pasar de premisas a conclusión, y si la fuerza de esta queda respaldada: posibilidad, ausencia de garantía, tendencia, universalidad y causalidad no son intercambiables. Distingue una limitación de verificación de evidencia de ausencia. Para usar la falta de hallazgos como evidencia de ausencia, comprueba la capacidad de detección del procedimiento y su cobertura; limita la conclusión a lo que ambas permitan, sin negar posibilidades fuera de esas condiciones.
+
 ### Texto o artículo
 
 Extrae las tesis centrales, normalmente entre tres y seis si la extensión lo permite. Examina capas factual, inferencial, retórica y de encuadre: verificabilidad y respaldo, saltos lógicos, recursos persuasivos y marcos alternativos. Identifica omisiones que realmente afecten la conclusión. La brevedad de un texto no implica por sí sola ocultación deliberada.

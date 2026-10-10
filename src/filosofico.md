@@ -24,7 +24,7 @@ Ajusta las recomendaciones editoriales a la petición y a dificultades documenta
 
 En estándar y profundo aborda las seis capas, ponderadas por tradición. Señala cuando una no aplique al contenido:
 
-1. **Conceptual:** consistencia de términos, equivocidad ordinaria/técnica y definiciones estipulativas frente a pretensiones de descubrimiento.
+1. **Conceptual:** consistencia de términos, equivocidad ordinaria/técnica y definiciones estipulativas frente a pretensiones de descubrimiento. Sigue los sentidos y criterios de éxito de los términos centrales entre premisas y conclusión. Distingue un cambio injustificado de criterio de un contraste explícito entre concepciones; este último no constituye por sí solo equivocidad.
 2. **Inferencial:** validez o legitimidad de pasos, premisas ocultas e intuiciones que soportan el razonamiento. Reconoce movimientos legítimos propios del método usado.
 3. **Dialéctica:** respuesta a objeciones fuertes, reconstrucción caritativa de rivales y mejor contraargumento omitido.
 4. **Hermenéutica:** fidelidad interpretativa, contexto, lecturas selectivas y distinción entre lo dicho por un autor y la lectura propuesta. Si no puedes consultar el pasaje original, limita el juicio de fidelidad.

@@ -214,5 +214,29 @@
     "contexto": "Auditor seleccionado. Se aporta el documento íntegro con ubicaciones; no hay búsqueda ni otras fuentes. Formato estándar.",
     "entrada": "Auditor Filosófico: audita en formato estándar este ensayo y prioriza lo que conviene corregir. Párrafo 1: «Preguntamos si una pausa garantiza la recuperación de todas las personas». Párrafo 2: «Tres asistentes dicen sentirse mejor; por tanto, toda persona se recupera siempre con una pausa». Párrafo 3: «El descanso requiere tiempo propio». Párrafo 4: «El descanso requiere tiempo propio». Párrafo 5: «L. Prado (s.f.) afirmó en una entrevista que una guerra le hizo defender esta idea». Bibliografía: «Prado, L. (2017). Conversaciones sobre el descanso. Editorial del Sur». El documento identifica esa entrada como la misma entrevista citada, pero no aporta su contenido.",
     "expectativas": ["Abre con enfoque, alcance y síntesis del juicio o prioridad antes del desarrollo detallado", "Prioriza el salto desde tres testimonios a una garantía universal y localiza su evidencia", "Identifica la repetición literal con ambos párrafos sin afirmar un porcentaje de pérdida de calidad", "Distingue discrepancia bibliográfica interna comprobada de atribución histórica sin verificar", "Separa gravedad y confianza con razones en los hallazgos principales y ofrece acciones concretas", "No declara falsa la atribución histórica ni invalida toda la tesis por una incidencia bibliográfica"]
+  },
+  {
+    "id": "criterio-conceptual-cambiado",
+    "contexto": "Auditor seleccionado. Se aporta íntegramente un argumento con una definición estipulada, sin pretensión de describir la posición completa de ningún filósofo.",
+    "entrada": "Auditor Filosófico: evalúa este argumento: «Por vida lograda entiendo aquí una vida guiada por la virtud. La vida de Irene estuvo guiada por la virtud y tuvo dolor. Como sufrió, su vida no fue lograda».",
+    "expectativas": ["Reconstruye el criterio de vida lograda declarado en la primera premisa", "Localiza el cambio a ausencia de dolor en la conclusión y explica el puente ausente", "Reconoce que virtud y dolor son compatibles bajo la definición aportada", "No exige adoptar una teoría universal de felicidad ni atribuye la definición a un filósofo"]
+  },
+  {
+    "id": "sentidos-comparados-explicitos",
+    "contexto": "Auditor seleccionado. Texto íntegro que contrasta expresamente dos criterios, sin equipararlos ni prometer una única definición.",
+    "entrada": "Auditor Filosófico: examina la coherencia de este contraste: «Comparo vida lograda, entendida aquí como vida guiada por la virtud, y bienestar placentero, entendido como experiencia agradable. Irene conserva la primera mientras pierde el segundo. No los considero equivalentes ni deduzco la ausencia de virtud a partir del dolor».",
+    "expectativas": ["Reconoce la distinción explícita entre los dos criterios y su función comparativa", "No acusa equivocidad ni contradicción solo por usar concepciones diferentes", "Evalúa la compatibilidad del contraste sin imponer un criterio único de éxito", "Conserva el alcance conceptual del juicio sin verificar como hechos los datos de Irene"]
+  },
+  {
+    "id": "no-garantia-no-demuestra-tendencia",
+    "contexto": "Auditor seleccionado. Para examinar la inferencia se concede como verdadera la premisa sobre el participante; no se conocen frecuencias, condiciones laborales ni situación anterior.",
+    "entrada": "Auditor Filosófico: evalúa este argumento: «Un participante completó el curso y no consiguió empleo. Por tanto, completar el curso no garantiza empleo a todos los participantes. De ello concluyo que cursarlo normalmente reduce la empleabilidad».",
+    "expectativas": ["Admite que el caso concedido refuta la garantía universal indicada", "Distingue esa ausencia de garantía de la afirmación de una tendencia negativa", "Explica que un caso no establece frecuencia ni efecto causal sobre empleabilidad", "Identifica qué evidencia o comparación adicional sostendría la tendencia sin invalidar la conclusión mínima"]
+  },
+  {
+    "id": "ausencia-y-deteccion-acotada",
+    "contexto": "Auditor seleccionado. A no tuvo acceso al contenido; en B se aporta todo el contenido de un archivo de texto plano de dos líneas, sin anexos ni imágenes. Se pregunta solo por cifras escritas.",
+    "entrada": "Auditor Filosófico: compara estas inferencias. A: «No pude abrir el archivo; por tanto, no contiene cifras escritas». B: «Leí el archivo íntegro; sus únicas líneas son alfa y beta, tal como se transcriben aquí. Por tanto, no contiene cifras escritas». ¿Están igualmente respaldadas?",
+    "expectativas": ["Detecta que A convierte una limitación de acceso en una afirmación de ausencia", "Admite la ausencia de cifras respaldada en B con cobertura suficiente y contenido pertinente", "No prohíbe universalmente inferir ausencia a partir de una comprobación negativa adecuada", "Compara las inferencias y limita el juicio al contenido y tipo de cifras indicados"]
   }
 ]
