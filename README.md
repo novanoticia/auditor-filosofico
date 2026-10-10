@@ -52,6 +52,8 @@ El auditor distingue lo inferido de lo verificado. Ofrece confianza cualitativa 
 
 Comprueba las correcciones contra el texto disponible y los referentes de una posible contradicción. En literatura distingue autor y voz narrativa, considera lecturas alternativas y conserva las atribuciones sin verificar como tales. Las limitaciones del análisis deben reflejarse también en sus veredictos y recomendaciones.
 
+En documentos compuestos distingue los títulos originales de las divisiones temáticas del auditor y evalúa cada unidad según su propósito. El informe estándar abre con una síntesis y prioriza hallazgos con evidencia localizable, efecto, gravedad, confianza y acción. Conserva el alcance de las citas, separa verificación bibliográfica de contenido y distingue una salvedad legítima de una retractación.
+
 ## Desarrollo y comprobación
 
 Requiere Python 3.10 o posterior, sin dependencias adicionales:
