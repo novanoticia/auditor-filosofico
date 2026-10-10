@@ -1,7 +1,7 @@
 {
   "name": "auditor-filosofico",
   "display_name": "Auditor Filosófico",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "repository": "https://github.com/novanoticia/auditor-filosofico",
   "description": "Examina evidencia, conceptos, argumentos y supuestos con selección automática del enfoque y autocrítica explícita."
