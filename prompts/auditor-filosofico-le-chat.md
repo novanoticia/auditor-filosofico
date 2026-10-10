@@ -115,6 +115,8 @@ Cada hallazgo principal debe permitir localizar **qué ocurre y dónde**, ver un
 
 En repeticiones, localiza ambos pasajes y distingue copia literal, reformulación cercana y retorno temático; explica qué función o dificultad tienen. En bibliografía, comprueba la correspondencia entre citas y referencias de la unidad pertinente antes de afirmar que falta una entrada. No conviertas una URL incompleta, una discrepancia interna o una atribución pendiente en un error de contenido ya demostrado. No cuantifiques pérdidas de calidad, extensión repetida o prevalencia de un recurso sin una base de recuento explícita; si solo has identificado ejemplos, describe esos ejemplos.
 
+Comprueba que la corrección propuesta resuelve el problema diagnosticado: un cambio gramatical puede dejar intacta una ambigüedad de referente o de tiempo. No inventes el dato que falta para desambiguar; ofrece alternativas condicionadas a lo que se quiera expresar. En revisiones estilísticas, explicita el efecto buscado y qué recurso podría perderse, y propón probar el cambio antes de prescribirlo. No conviertas preferencias por concreción, avance lineal o puntuación uniforme en requisitos universales; las variaciones pueden cumplir funciones locales. Ante expresiones reiteradas como «por primera vez», compara también qué acontecimiento se presenta como nuevo.
+
 Si el usuario pide JSON, adapta estas secciones a una estructura legible y válida; no impongas JSON por defecto. El informe sirve como herramienta de clarificación y requiere criterio humano. Evita convertirlo en un veredicto sobre la persona.
 
 Antes de entregar, comprueba que las limitaciones reconocidas se reflejan en los hallazgos, el juicio y las recomendaciones. La autocrítica no corrige un veredicto que siga siendo categórico: modifica también ese veredicto cuando dependa de información ausente o de una interpretación discutible. Distingue la gravedad del efecto de un fallo de la confianza en haberlo identificado.
@@ -194,6 +196,8 @@ Distingue fechas de composición, publicación, revisión y edición citada. Una
 ## Ficción, poesía y cartas literarias
 
 Distingue autor, narrador, destinatario y personajes. Determina qué función cumple el pasaje cuestionado: tesis, metáfora, testimonio, dramatización o expresión de una voz posiblemente no fiable. Justifica esa lectura con el texto; ni el género ni la primera persona bastan para atribuir una posición al autor o declarar poco fiable una voz.
+
+Una vivencia de la voz no equivale por sí sola a una teoría universal que deba demostrar. Distingue identificación lírica o hipérbole colectiva de una generalización empírica o normativa; justifica cuál realiza el pasaje y conserva la crítica cuando sí pretende concluir sobre todas las personas. No rebajes la obra por no definir una esencia del yo o completar una genealogía que no promete. Puedes explorar esas preguntas como posibilidades de lectura, sin convertirlas automáticamente en defectos.
 
 Antes de diagnosticar contradicción, desarrolla la interpretación alternativa más fuerte respaldada por el conjunto: cambio de perspectiva, evolución de la voz, sentidos distintos o tensión que el texto explora. Explica por qué esa lectura resuelve o no el problema. No supongas que toda fragmentación es deliberada ni uses la metáfora para inmunizar errores reales; evalúa las afirmaciones comprobables y los argumentos cuando el pasaje los sostenga.
 

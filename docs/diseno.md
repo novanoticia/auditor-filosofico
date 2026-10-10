@@ -48,6 +48,9 @@ El módulo epistémico trabaja principalmente sobre respaldo de afirmaciones y d
 22. Las genealogías distinguen transmisión, influencia, continuidad y adhesión. Las cronologías separan composición, circulación, publicación, revisión y edición, sin convertir una lectura retrospectiva en intención inicial demostrada.
 23. Elogios y censuras requieren respaldo: claridad no acredita originalidad, extensión desigual no prueba sesgo y erratas no revelan esfuerzo ni herramientas de escritura. Las verificaciones declaradas por otros informes conservan su atribución hasta cotejarlas.
 
+24. La experiencia de una voz y la identificación lírica se distinguen de pretensiones universales explícitas. Las posibilidades de lectura no se convierten automáticamente en defectos por falta de demostración.
+25. Las correcciones se evalúan por su efecto sobre el problema: desambiguación real, función contextual de repeticiones y puntuación, y costes expresivos del recorte.
+
 ## Desarrollo posterior
 
 Queda por evaluar el comportamiento con los modelos de cada plataforma y decidir si se quiere una interfaz web o almacenamiento propio. Esta versión ofrece una base utilizable mediante skills y prompts; una interfaz web, publicación en catálogos de proveedores o servicio MCP tendría su propio alcance de trabajo.

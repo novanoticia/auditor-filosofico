@@ -18,6 +18,8 @@ Distingue fechas de composición, publicación, revisión y edición citada. Una
 
 Distingue autor, narrador, destinatario y personajes. Determina qué función cumple el pasaje cuestionado: tesis, metáfora, testimonio, dramatización o expresión de una voz posiblemente no fiable. Justifica esa lectura con el texto; ni el género ni la primera persona bastan para atribuir una posición al autor o declarar poco fiable una voz.
 
+Una vivencia de la voz no equivale por sí sola a una teoría universal que deba demostrar. Distingue identificación lírica o hipérbole colectiva de una generalización empírica o normativa; justifica cuál realiza el pasaje y conserva la crítica cuando sí pretende concluir sobre todas las personas. No rebajes la obra por no definir una esencia del yo o completar una genealogía que no promete. Puedes explorar esas preguntas como posibilidades de lectura, sin convertirlas automáticamente en defectos.
+
 Antes de diagnosticar contradicción, desarrolla la interpretación alternativa más fuerte respaldada por el conjunto: cambio de perspectiva, evolución de la voz, sentidos distintos o tensión que el texto explora. Explica por qué esa lectura resuelve o no el problema. No supongas que toda fragmentación es deliberada ni uses la metáfora para inmunizar errores reales; evalúa las afirmaciones comprobables y los argumentos cuando el pasaje los sostenga.
 
 No exijas una respuesta del destinatario, otras voces o una demostración formal solo porque faltan en una carta, poema o monólogo. Señala la ausencia si afecta una pretensión concreta del texto. Ante referencias a la muerte, distingue lectura literal, simbólica o ambigua y conserva la incertidumbre; su representación no implica una prescripción del autor.
