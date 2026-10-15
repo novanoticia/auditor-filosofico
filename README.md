@@ -1,6 +1,7 @@
 # Auditor Filosófico
 
-[![Versión actual en main](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnovanoticia%2Fauditor-filosofico%2Fmain%2Fproject.json&query=%24.version&prefix=v&label=Versi%C3%B3n%20actual%20en%20main&color=blue)](https://github.com/novanoticia/auditor-filosofico/blob/main/project.json)
+[![Versión en main](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnovanoticia%2Fauditor-filosofico%2Fmain%2Fproject.json&query=%24.version&prefix=v&label=Versi%C3%B3n%20en%20main&color=blue)](https://github.com/novanoticia/auditor-filosofico/blob/main/project.json)
+[![Última versión publicada](https://img.shields.io/github/v/release/novanoticia/auditor-filosofico?display_name=tag&label=%C3%9Altima%20versi%C3%B3n%20publicada&color=green)](https://github.com/novanoticia/auditor-filosofico/releases/latest)
 
 Auditor multiplataforma para examinar evidencia, conceptos, argumentos y supuestos con métodos adaptados al contenido y autocrítica explícita. La filosofía incluye aquí la epistemología. Cada IA aplica el método con su propio modelo.
 
