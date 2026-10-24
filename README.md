@@ -82,7 +82,3 @@ Los [casos de evaluación](evals/casos.json) sirven para comprobar el comportami
 La propuesta de alcance y los cambios respecto de los adjuntos están en [las decisiones de diseño](docs/diseno.md). Los [originales aportados](references/originales/README.md) conservan su contenido histórico. El proyecto se distribuye bajo la [licencia MIT](LICENSE).
 
 `python3 scripts/build.py` también regenera los ZIP versionados de `downloads/`; `--check` comprueba que coincidan con las fuentes. Al cambiar la versión en `project.json` en `main`, GitHub Actions regenera y guarda los archivos y publica la release automáticamente. Añade previamente sus notas en `docs/releases/v<versión>.md`. Consulta las [descargas y generación por versión](downloads/README.md).
-
-*Dedicado a Francisco José García Carbonell, sin cuyas obras y aportaciones no hubiera sido posible.*
-
-*Doctor en Teología, Máster en Literatura Comparada Europea y en Filosofía Contemporánea. Actualmente Cursando segundo de Psicología.*
