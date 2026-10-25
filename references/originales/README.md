@@ -9,4 +9,4 @@ Estos cuatro archivos se conservan sin modificaciones como fuentes históricas p
 
 Los números de versión identifican cada fuente, no una versión común del nuevo proyecto. Los JSX incluyen dependencias de un entorno de artefactos y llamadas a Claude; no constituyen una aplicación instalable del nuevo auditor.
 
-El método activo vive en `src/`, explicado en [las decisiones de diseño](../../docs/diseno.md). La procedencia de la taxonomía LessWrong se conserva como atribución del material original, con los límites descritos en la perspectiva opcional.
+El método activo vive en `src/`, explicado en [las decisiones de diseño](../../docs/diseno.md). Se mantiene la dedicatoria al Dr. Francisco José García Carbonell. La procedencia de la taxonomía LessWrong se conserva como atribución del material original, con los límites descritos en la perspectiva opcional.
