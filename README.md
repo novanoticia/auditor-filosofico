@@ -5,19 +5,17 @@
 
 Auditor multiplataforma para examinar evidencia, conceptos, argumentos y supuestos con métodos adaptados al contenido y autocrítica explícita. La filosofía incluye aquí la epistemología. Cada IA aplica el método con su propio modelo.
 
-## Uso
+**En esta página:**
+[En 2 minutos](#en-2-minutos) · [Empezar](#empezar) · [Uso](#uso) · [Método](#método) · [Desarrollo y comprobación](#desarrollo-y-comprobación)
 
-Después de cargar el prompt portable o seleccionar la skill:
+## En 2 minutos
 
-> Auditor Filosófico: analiza este texto.
+La forma más rápida, sin instalar nada y en cualquier IA:
 
-El auditor selecciona automáticamente análisis epistémico, conceptual y filosófico, o combinado. Explica su elección y conserva el contexto y los criterios de las tradiciones relevantes.
+1. Abre una conversación nueva y pega como primer mensaje el [prompt completo](prompts/auditor-filosofico.md).
+2. Escribe «Auditor Filosófico: analiza este texto» y pega el texto que quieres examinar.
 
-- **Bajo petición:** modalidad principal; una auditoría del contenido indicado.
-- **Acompañamiento:** «Auditor Filosófico: acompáñame en esta conversación». Se desactiva con «desactiva el acompañamiento» y se limita al chat accesible.
-- **Respuestas de IA:** «Auditor Filosófico: revisa la respuesta anterior».
-
-Puedes añadir «rápido», «profundo», un enfoque concreto o «desde LessWrong». La profundidad predeterminada es estándar. LessWrong es una perspectiva opcional. La expresión «audita esto» requiere que hayas seleccionado antes este auditor; los clientes con controles de invocación usan además su selector o comando propio.
+Para tenerlo siempre a mano, instálalo como plugin o skill en tu plataforma: ver [Empezar](#empezar).
 
 ## Empezar
 
@@ -42,6 +40,20 @@ Si utilizas **Subir Skills**, descarga y sube directamente el ZIP de tu platafor
 - [Perplexity: descargar ZIP](https://github.com/novanoticia/auditor-filosofico/raw/refs/heads/main/downloads/auditor-filosofico-perplexity-skill.zip).
 
 Los ZIP están incluidos en [downloads/](downloads/README.md) y contienen el método completo, metadatos YAML y `SKILL.md` en la raíz. También puedes importar el Markdown de [Le Chat](adapters/le-chat/SKILL.md) o [Perplexity](adapters/perplexity/SKILL.md). El ZIP de distribución `auditor-filosofico-chats-web.zip` se extrae; no sirve para ese importador.
+
+## Uso
+
+Después de cargar el prompt portable o seleccionar la skill:
+
+> Auditor Filosófico: analiza este texto.
+
+El auditor selecciona automáticamente análisis epistémico, conceptual y filosófico, o combinado. Explica su elección y conserva el contexto y los criterios de las tradiciones relevantes.
+
+- **Bajo petición:** modalidad principal; una auditoría del contenido indicado.
+- **Acompañamiento:** «Auditor Filosófico: acompáñame en esta conversación». Se desactiva con «desactiva el acompañamiento» y se limita al chat accesible.
+- **Respuestas de IA:** «Auditor Filosófico: revisa la respuesta anterior».
+
+Puedes añadir «rápido», «profundo», un enfoque concreto o «desde LessWrong». La profundidad predeterminada es estándar. LessWrong es una perspectiva opcional. La expresión «audita esto» requiere que hayas seleccionado antes este auditor; los clientes con controles de invocación usan además su selector o comando propio.
 
 ## Método
 
